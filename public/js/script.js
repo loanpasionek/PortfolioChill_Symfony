@@ -13,17 +13,20 @@ $('a[href^="#"]').on('click', function(event) {
         
         $('html, body').stop().animate({
             scrollTop: scroll
-        }, 1000);
+        }, 900);
     }
 });
 
 
 /* ------------  Bouton flottant en small screen ------------  */
 
-$(document).ready(function(){
+/* $(document).ready(function(){
     $('.fixed-action-btn').floatingActionButton();
-  });
+  }); */
 
+
+
+/* ------------  Parallax ------------  */
 
 
 
@@ -33,7 +36,7 @@ $(function(){
 
     var nav = $('nav');
     var $headerHeight = $("header").height();
-    var $aboutHeight = $("#about").height() + $("header").height();
+    var $projectHeight = $("#sectionProjets").height() + $headerHeight;
     var aLiens = $('#nav-mobile a');
 
 $(window).scroll(function()
@@ -43,19 +46,20 @@ $(window).scroll(function()
 
         if(scroll > $headerHeight){
             nav.removeClass('nocolor').addClass('navChange');
+            
         } else {
             if(scroll <= $headerHeight ){
                 nav.removeClass('navChange').addClass('nocolor');
             }
         }
 
-        if(scroll >  $aboutHeight){
+        if(scroll >  $projectHeight){
             nav.removeClass('navChange').addClass('navChange2');
             aLiens.each(function(){
                 $(this).addClass('color4').removeClass('divider-color');
             });
         } else {
-            if(scroll <=  $aboutHeight ){
+            if(scroll <=  $projectHeight ){
                 nav.removeClass('navChange2');
                 aLiens.each(function(){
                     $(this).addClass('divider-color').removeClass('color4');
@@ -65,3 +69,4 @@ $(window).scroll(function()
     });
     
     });
+    

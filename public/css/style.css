@@ -14,6 +14,7 @@ body{overflow-x:hidden;}
             /* Tailles */
 
             .bold{font-weight:700;}
+            .fs80{font-size:8rem;}
             .fs60{font-size:6rem;}
             .fs40{font-size:4rem;}
             .fs36{font-size:3.6rem;}
@@ -65,50 +66,73 @@ body{overflow-x:hidden;}
             .mtop45p{margin-top:45px;}
             .mtop20p{margin-top:20px;}
             .nomargin{margin: 0;}
+            .nopadding{padding:0;}
 
 
 /* ----------------------- Génériques ----------------------- */
 
+            /* Display and justify */
+
             .flex{display: flex;}
+            .iblock{display: inline-block;}
+            .column{ flex-direction:column;}
+            .jcbetween{justify-content: space-between;}
+            .jcaround{justify-content: space-around;}
             .jccenter{justify-content: center;}
-            .text-justify{text-align: justify;}
+            .aicenter{align-items:center;}
+            .txtcenter{text-align:center;}
+
+
+            /* Positions */
+
+            .absolute{position:absolute;}
             .fixed{position:fixed;}
+            .relative{position: relative;}
+    
+            
+            .textjustify{text-align:justify;}
+            .center{margin:auto;}
 
 
 /* ----------------------- Spécifiques ----------------------- */
+
             .hoverable:hover{color:blue;}
             .nopargin{margin:0;
             padding:0;}
 
+            .rotated{
+                writing-mode: tb-rl;
+                transform: rotate(-180deg);
+                }
+            .row:last-child {
+                margin-bottom: 0;
+            }
 
+            nav{
+                box-shadow: none;    
+            }
 
-nav{
-    box-shadow: none;    
-  }
+            .bgOpacity95{background-color:#fff;
+                opacity:0.95;}
 
-  #sectionProjets{background-color:#fff;
-    opacity:0.95;}
-
-.sidenav li > a.color4, .color4{color:#212121;} /* noir */
+            .sidenav li > a.color4, .color4{color:#212121;} /* noir */
 
 /* ----------------------- Parallax ----------------------- */
 
-.slide1 {
-    background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;
+            .slide1 {
+                background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;
 
-}
-.slide2 {
-background: url('../img/bg_city.jpg') center 0 no-repeat fixed;
+            }
+            
+            .slide3 {
+                background: url('../img/bg_pluie.jpg') center no-repeat fixed;
+                background-size: cover;
+            }
 
-}
-.slide3 {
-background: url('../img/bg_forest_bot_1200') center 0 no-repeat fixed;
-background-size: cover;
-}
 
 /* ----------------------- Changement de nav selon position dans la page ----------------------- */
 
-.navChange{background-color:#573F12;
+.navChange{background-color:#E64A19;
 opacity:0.85;
 transition: 0.5s linear;}
 .navChange2{background-color:#FFFFFF;
@@ -141,6 +165,18 @@ transition: 0.5s linear;}
 
     #title{text-align:center;
       line-height:50px;
-      font-size:3.2rem;
+      font-size:4rem;
     }
+
+    .fs40-sm{font-size:4rem;}
+    .block-on-med-and-down{display: block;}
+    /* Annulation des classes appliquées au H1 en large-screen */
+    .h1-sm{
+        display:block;
+        margin:0;
+        font-size:3.2rem;
+        text-align: center;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        }
 }
