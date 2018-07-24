@@ -18,7 +18,7 @@ $('a[href^="#"]').on('click', function(event) {
 });
 
 
-/* Bouton flottant en small screen */
+/* ------------  Bouton flottant en small screen ------------  */
 
 $(document).ready(function(){
     $('.fixed-action-btn').floatingActionButton();
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 
 
-/* Nav changeant sur scrolling */
+/* ------------  Nav changeant sur scrolling ------------  */
 
 $(function(){
 
@@ -40,7 +40,6 @@ $(window).scroll(function()
     {
         var scroll = $(window).scrollTop();
         
-        console.log(scroll + ' / ' + $headerHeight + ' / ' + $aboutHeight);
 
         if(scroll > $headerHeight){
             nav.removeClass('nocolor').addClass('navChange');
