@@ -31,13 +31,13 @@ body{overflow-x:hidden;}
 
             .color1{color: #E64A19;} /* orange */
             .color2{color:#757575;}
-            .color3{color:#FFFFFF;} /* blanc */
+            .color3{color:#E3E7E7;} /* blanc */
             
 
             /* Backgrounds */
 
             .bgcolor1{background-color: #FF5722; }
-            .bgcolor2{background-color: #FFFFFF;}
+            .bgcolor2{background-color: #E3E7E7;}
             .bgcolor3{background-color:#3F51B5;}
 
 
@@ -81,6 +81,7 @@ body{overflow-x:hidden;}
             .jccenter{justify-content: center;}
             .aicenter{align-items:center;}
             .txtcenter{text-align:center;}
+            .hidden{visibility:hidden;}
 
 
             /* Positions */
@@ -124,7 +125,7 @@ body{overflow-x:hidden;}
 
             }
             
-            .slide3 {
+            .slide2 {
                 background: url('../img/bg_pluie.jpg') center no-repeat fixed;
                 background-size: cover;
             }
@@ -135,7 +136,7 @@ body{overflow-x:hidden;}
 .navChange{background-color:#E64A19;
 opacity:0.85;
 transition: 0.5s linear;}
-.navChange2{background-color:#FFFFFF;
+.navChange2{background-color:#E3E7E7;
 opacity:0.85;
 transition: 0.5s linear;}
 
@@ -162,6 +163,22 @@ transition: 0.5s linear;}
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+
+
+    /* Fonts size en small, 20% moins grandes */
+    .fs80-sm{font-size:6.4rem;}
+    .fs60-sm{font-size:4.8rem;}
+    .fs40-sm{font-size:3.2rem;}
+    .fs36-sm{font-size:2.9rem;}
+    .fs32-sm{font-size:2.6rem;}
+    .fs24-sm{font-size:1.9rem;}
+    .fs20-sm{font-size:1.6rem;}
+    .fs18-sm{font-size:1.4rem;}
+    .fs15-sm{font-size:1.2rem;}
+
+
+    .text-justify-sm{text-align: justify;}
+
 
     #title{text-align:center;
       line-height:50px;
