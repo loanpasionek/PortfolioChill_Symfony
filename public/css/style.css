@@ -87,7 +87,7 @@ body{overflow-x:hidden;}
             .aicenter{align-items:center;}
             .txtcenter{text-align:center;}
             .hidden{visibility:hidden;
-                transition: 0.5s linear;}
+         }
 
 
             /* Positions */
@@ -174,9 +174,8 @@ transition: 0.5s linear;}
     /* Parallax : background uni */
     .slide1{background-image:none;}
     .slide2{background-image:none;}
-    .slide1-sm {
-        
-        background-color:#73250D;
+    .slide1-sm {        
+        background-color:#231202;
     }
     .slide2-sm {
         background-color:purple;

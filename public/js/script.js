@@ -84,13 +84,13 @@ $('a[href^="#"]').on('click', function(event) {
                 
             }
 
-            if(scroll > windowHeight-navHeight*3){
+            if(scroll > windowHeight-navHeight-200){
 
                 coloredChar2.removeClass('color1').addClass('hidden');
             }
 
             else{
-                if(scroll <= windowHeight-navHeight*3){
+                if(scroll <= windowHeight-navHeight-200){
                     coloredChar2.removeClass('hidden').addClass('color1');
                 }
             }
@@ -108,6 +108,8 @@ $('a[href^="#"]').on('click', function(event) {
         
         /* Application de la fonction sur écrans < 800 */
         if (screen.width <= 800){
+            var bgPresentation = $('.bg_forest_sm');
+            
             if (scroll > windowHeight-navHeight){
                 nav.removeClass('nocolor').addClass('navChange');
             }
@@ -121,11 +123,13 @@ $('a[href^="#"]').on('click', function(event) {
             if (scroll > windowHeight-navHeight){
                 presentation.addClass('hidden');
                 coloredChar1.removeClass('color1').addClass('hidden');
+                bgPresentation.addClass('hidden');
             }
             else{
                 if(scroll <= windowHeight-navHeight){
                 presentation.removeClass('hidden');
                 coloredChar1.removeClass('hidden').addClass('color1');
+                bgPresentation.removeClass('hidden');
                 }
                 
             }
