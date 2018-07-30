@@ -62,11 +62,11 @@ $('a[href^="#"]').on('click', function(event) {
 
         /* Application de la fonction sur écrans larges > 800 */
         if (screen.width > 800){
-            if (scroll > windowHeight/2){
+            if (scroll > windowHeight-navHeight){
                 nav.removeClass('nocolor').addClass('navChange');
             }
             else{
-                if(scroll <= windowHeight/2){
+                if(scroll <= windowHeight-navHeight){
                     nav.removeClass('navChange').addClass('nocolor');
                 }
                 
@@ -118,12 +118,12 @@ $('a[href^="#"]').on('click', function(event) {
                 
             }
 
-            if (scroll > windowHeight-navHeight*2){
+            if (scroll > windowHeight-navHeight){
                 presentation.addClass('hidden');
                 coloredChar1.removeClass('color1').addClass('hidden');
             }
             else{
-                if(scroll <= windowHeight-navHeight*2){
+                if(scroll <= windowHeight-navHeight){
                 presentation.removeClass('hidden');
                 coloredChar1.removeClass('hidden').addClass('color1');
                 }
