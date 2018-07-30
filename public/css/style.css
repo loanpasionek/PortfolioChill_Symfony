@@ -42,6 +42,7 @@ body{overflow-x:hidden;}
             .bgcolor3{background-color:#3F51B5;} /* violet */
             .bgcolor4{background-color:#C94116;} /* orange foncé */
             .bgcolor5{background-color:#2a2a2a;} /* noir */
+            .bgcolor6{background-color:#231202;}
 
 
             
@@ -58,7 +59,6 @@ body{overflow-x:hidden;}
             .h300p{height:300px;}
             .h275p{height:275px;}
             .h230p{height:230px;}
-            .h125p{height:125px;}
 
 
 /* ----------------------- Widths ----------------------- */
@@ -115,6 +115,7 @@ body{overflow-x:hidden;}
             }
 
             nav{box-shadow: none;}
+            .opacity95{opacity:0.95;}
             
 
             .bgOpacity95{background-color:#fff;
@@ -196,9 +197,11 @@ transition: 0.5s linear;}
         font-size:1.8rem;
         padding:0 10px 0;
         margin: 10px 0;
+        color:#E3E7E7;
     }
     .sidenav li>a>i{
-        margin: -10px 0 10px;
+        margin: -5px 0 10px;
+        color:#E3E7E7;
     }
 
 
@@ -210,8 +213,8 @@ transition: 0.5s linear;}
       line-height:50px;
       font-size:4rem;
     }
+    .h125p-sm{height:125px;}
 
-    .fs40-sm{font-size:4rem;}
     .block-on-med-and-down{display: block;}
     /* Annulation des classes appliquées au H1 en large-screen */
     .h1-sm{
