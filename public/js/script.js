@@ -9,7 +9,7 @@ $('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
 
 
-        var scroll = target.offset().top - nav;
+        var scroll = target.offset().top - nav + 2;
         
         $('html, body').stop().animate({
             scrollTop: scroll
