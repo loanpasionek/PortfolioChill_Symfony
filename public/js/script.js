@@ -120,13 +120,13 @@ $('a[href^="#"]').on('click', function(event) {
                 
             }
 
-            if (scroll > windowHeight-navHeight){
+            if (scroll > windowHeight-navHeight-50){
                 presentation.addClass('hidden');
                 coloredChar1.removeClass('color1').addClass('hidden');
                 bgPresentation.addClass('hidden');
             }
             else{
-                if(scroll <= windowHeight-navHeight){
+                if(scroll <= windowHeight-navHeight-50){
                 presentation.removeClass('hidden');
                 coloredChar1.removeClass('hidden').addClass('color1');
                 bgPresentation.removeClass('hidden');

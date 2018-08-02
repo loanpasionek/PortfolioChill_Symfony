@@ -68,6 +68,7 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Margins ----------------------- */
             
+            .mtop75p{margin-top:75px;}
             .mtop45p{margin-top:45px;}
             .mtop20p{margin-top:20px;}
             .nomargin{margin: 0;}
@@ -123,6 +124,7 @@ body{overflow-x:hidden;}
 
             a:hover{color:#FF5722 !important;}
 
+            .faHover:hover{color:#FF5722 !important;}
 /* ----------------------- Parallax ----------------------- */
 
             .slide1 {
