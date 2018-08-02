@@ -44,14 +44,15 @@ body{overflow-x:hidden;}
             .bgcolor5{background-color:#2a2a2a;} /* noir */
             .bgcolor6{background-color:#231202;}
 
-
             
             .divider-color{ border-color: #BDBDBD; }
             .nocolor{background: none;
                 transition: 0.5s linear;}
 
 /* ----------------------- Heights ----------------------- */
+
             .h100vh{height:100vh;}
+            .h100minusNav{height:calc(100vh - 64px);}
             .h660p{height:660px;}
             .h500p{height:500px;}
             .h360p{height:360px;}
@@ -140,17 +141,17 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Changement de nav selon position dans la page ----------------------- */
 
-.navChange{background-color:#E64A19;
-opacity:0.85;
-transition: 0.5s linear;}
-.navChange2{background-color:#E3E7E7;
-opacity:0.85;
-transition: 0.5s linear;}
+            .navChange{background-color:#E64A19;
+            opacity:0.85;
+            transition: 0.5s linear;}
+            .navChange2{background-color:#E3E7E7;
+            opacity:0.85;
+            transition: 0.5s linear;}
 
 
 
 
-/* ------------- Media queries ------------- */
+/* ----------------------- Media queries ----------------------- */
 
 
 /* Large Devices, Wide Screens */
@@ -171,6 +172,7 @@ transition: 0.5s linear;}
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 
+    .h100minusNav-sm{height:calc(100vh - 55px);}
 
     .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
 
