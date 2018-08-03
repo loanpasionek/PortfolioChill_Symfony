@@ -52,6 +52,7 @@ $('a[href^="#"]').on('click', function(event) {
         var containerNav = $('#containerNav');
         var nav = $('nav');
         var navHeight = nav.height();
+        var interludeHeight = $('#interlude').height();
         var windowHeight = $(window).height();
         var presentation = $('#presentation');
         var coloredChar1 = $('.coloredChars1');  /* Toutes les lettres orange sauf le "C" de Code */

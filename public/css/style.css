@@ -67,11 +67,13 @@ body{overflow-x:hidden;}
             .w300p{width:300px;}
             .w165p{width:165px;}
 
-/* ----------------------- Margins ----------------------- */
+/* ----------------------- Margins & Paddings ----------------------- */
             
             .mtop75p{margin-top:75px;}
             .mtop45p{margin-top:45px;}
             .mtop20p{margin-top:20px;}
+            .pding15p{padding:15px;}
+
             .nomargin{margin: 0;}
             .nopadding{padding:0;}
 
@@ -88,8 +90,7 @@ body{overflow-x:hidden;}
             .jccenter{justify-content: center;}
             .aicenter{align-items:center;}
             .txtcenter{text-align:center;}
-            .hidden{visibility:hidden;
-         }
+            .hidden{visibility:hidden;}
 
 
             /* Positions */
