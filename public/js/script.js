@@ -55,6 +55,7 @@ $('a[href^="#"]').on('click', function(event) {
         var interludeHeight = $('#interlude').height();
         var windowHeight = $(window).height();
         var presentation = $('#presentation');
+        var coloredChar = $('.coloredChars');
         var coloredChar1 = $('.coloredChars1');  /* Toutes les lettres orange sauf le "C" de Code */
         var coloredChar2 = $('.coloredChars2');
         $(window).scroll(function()
@@ -85,14 +86,25 @@ $('a[href^="#"]').on('click', function(event) {
                 
             }
 
+            if(scroll > navHeight+30){
+
+                coloredChar.addClass('hidden');
+            }
+
+            else{
+                if(scroll <= navHeight+30){
+                    coloredChar.removeClass('hidden');
+                }
+            }
+
             if(scroll > windowHeight-navHeight-200){
 
-                coloredChar2.removeClass('color1').addClass('hidden');
+                coloredChar2.addClass('hidden');
             }
 
             else{
                 if(scroll <= windowHeight-navHeight-200){
-                    coloredChar2.removeClass('hidden').addClass('color1');
+                    coloredChar2.removeClass('hidden');
                 }
             }
 

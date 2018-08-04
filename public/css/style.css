@@ -72,8 +72,9 @@ body{overflow-x:hidden;}
             .mtop75p{margin-top:75px;}
             .mtop45p{margin-top:45px;}
             .mtop20p{margin-top:20px;}
+            .mleft40p{margin-left:40px;}
             .pding15p{padding:15px;}
-
+            .mAuto{margin:auto;}
             .nomargin{margin: 0;}
             .nopadding{padding:0;}
 
@@ -99,6 +100,10 @@ body{overflow-x:hidden;}
             .fixed{position:fixed;}
             .relative{position: relative;}
     
+            .valign{position:absolute;
+                    top:50%;
+                    transform:translateY(-50%);}
+
             
             .textjustify{text-align:justify;}
             .center{margin:auto;}
