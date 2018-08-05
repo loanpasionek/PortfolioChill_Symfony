@@ -71,6 +71,7 @@ body{overflow-x:hidden;}
             
             .mtop75p{margin-top:75px;}
             .mtop45p{margin-top:45px;}
+            .mtop30p{margin-top:30px;}
             .mtop20p{margin-top:20px;}
             .mleft40p{margin-left:40px;}
             .pding15p{padding:15px;}
@@ -111,7 +112,6 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Spécifiques ----------------------- */
 
-            .hoverable:hover{color:blue;}
             
             /* Ecriture verticale */
             .rotated{
@@ -121,6 +121,8 @@ body{overflow-x:hidden;}
             .row:last-child {
                 margin-bottom: 0;
             }
+
+            .row{margin-bottom:0;}
 
             nav{box-shadow: none;}
             .opacity95{opacity:0.95;}
@@ -155,8 +157,6 @@ body{overflow-x:hidden;}
             transition: 0.5s linear;}
 
 
-
-
 /* ----------------------- Media queries ----------------------- */
 
 
@@ -179,6 +179,7 @@ body{overflow-x:hidden;}
 @media only screen and (max-width : 480px) {
 
     .h100minusNav-sm{height:calc(100vh - 55px);}
+    .mtop30p-sm{margin-top:0px;}
 
     .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
 

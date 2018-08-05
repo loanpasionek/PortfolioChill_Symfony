@@ -13,7 +13,7 @@ $('a[href^="#"]').on('click', function(event) {
         
         $('html, body').stop().animate({
             scrollTop: scroll
-        }, 900);
+        }, 2000);
     }
 });
 
@@ -32,7 +32,7 @@ $('a[href^="#"]').on('click', function(event) {
         
         $('html, body').stop().animate({
             scrollTop: scroll
-        }, 900);
+        }, 2000);
     }
 }
 });
@@ -46,130 +46,69 @@ $('a[href^="#"]').on('click', function(event) {
 
 
 
-/* ------------  Nav changeant sur scrolling ------------  */
+/* ------------  Changement sur scrolling ------------  */
 
-    $(function(){
-        var containerNav = $('#containerNav');
+    $(function()
+    {
         var nav = $('nav');
         var navHeight = nav.height();
-        var interludeHeight = $('#interlude').height();
         var windowHeight = $(window).height();
         var presentation = $('#presentation');
-        var coloredChar = $('.coloredChars');
-        var coloredChar1 = $('.coloredChars1');  /* Toutes les lettres orange sauf le "C" de Code */
-        var coloredChar2 = $('.coloredChars2');
+        var coloredChars = $('.coloredChars');
         $(window).scroll(function()
-    {
-        var scroll = $(window).scrollTop();
+        {
+            var scroll = $(window).scrollTop();
 
-        /* Application de la fonction sur écrans larges > 800 */
-        if (screen.width > 800){
-            if (scroll > windowHeight-navHeight){
-                nav.removeClass('nocolor').addClass('navChange');
-            }
-            else{
-                if(scroll <= windowHeight-navHeight){
-                    nav.removeClass('navChange').addClass('nocolor');
+            /* Application de la fonction sur écrans larges > 800 */
+            if (screen.width > 800)
+                {
+                    if (scroll > windowHeight-navHeight)
+                    {
+                        nav.removeClass('nocolor').addClass('navChange');
+                        presentation.addClass('hidden');
+                        coloredChars.addClass('hidden');
+
+                    }
+                    else
+                    {
+                        if(scroll <= windowHeight-navHeight)
+                        {
+                        nav.removeClass('navChange').addClass('nocolor');
+                        presentation.removeClass('hidden');
+                        coloredChars.removeClass('hidden');
+
+                        }
+                    }
+                    
                 }
-                
-            }
-
-            if (scroll > windowHeight-navHeight*2){
-                presentation.addClass('hidden');
-                coloredChar1.removeClass('color1').addClass('hidden');
-            }
-            else{
-                if(scroll <= windowHeight-navHeight*2){
-                presentation.removeClass('hidden');
-                coloredChar1.removeClass('hidden').addClass('color1');
-                }
-                
-            }
-
-            if(scroll > navHeight+30){
-
-                coloredChar.addClass('hidden');
-            }
-
-            else{
-                if(scroll <= navHeight+30){
-                    coloredChar.removeClass('hidden');
-                }
-            }
-
-            if(scroll > windowHeight-navHeight-200){
-
-                coloredChar2.addClass('hidden');
-            }
-
-            else{
-                if(scroll <= windowHeight-navHeight-200){
-                    coloredChar2.removeClass('hidden');
-                }
-            }
-
-            if (scroll > windowHeight*2){
-                nav.removeClass('nocolor').addClass('bgcolor3');
-            }
-            else{
-                if(scroll < windowHeight){
-                nav.removeClass('bgcolor3').addClass('nocolor');
-                }
-                
-            }
-        }
-        
-        /* Application de la fonction sur écrans < 800 */
-        if (screen.width <= 800){
-            var bgPresentation = $('.bg_forest_sm');
             
-            if (scroll > windowHeight-navHeight){
-                nav.removeClass('nocolor').addClass('navChange');
-            }
-            else{
-                if(scroll <= windowHeight-navHeight){
-                nav.removeClass('navChange').addClass('nocolor');
-                }
+            /* Application de la fonction sur écrans < 800 */
+            if (screen.width <= 800)
+            {
+                var bgPresentation = $('.bg_forest_sm');
                 
-            }
-
-            if (scroll > windowHeight-navHeight-50){
-                presentation.addClass('hidden');
-                coloredChar1.removeClass('color1').addClass('hidden');
-                bgPresentation.addClass('hidden');
-            }
-            else{
-                if(scroll <= windowHeight-navHeight-50){
-                presentation.removeClass('hidden');
-                coloredChar1.removeClass('hidden').addClass('color1');
-                bgPresentation.removeClass('hidden');
+                if (scroll > windowHeight-navHeight)
+                {
+                    nav.removeClass('nocolor').addClass('navChange');
+                    presentation.addClass('hidden');
+                    coloredChars.removeClass('color1').addClass('hidden');
+                    bgPresentation.addClass('hidden');
                 }
-                
-            }
-
-            if(scroll > windowHeight-navHeight*2+20){
-
-                coloredChar2.removeClass('color1').addClass('hidden');
-            }
-
-            else{
-                if(scroll <= windowHeight-navHeight*2+20){
-                    coloredChar2.removeClass('hidden').addClass('color1');
+                else
+                {
+                    if(scroll <= windowHeight-navHeight)
+                    {
+                        nav.removeClass('navChange').addClass('nocolor');
+                        presentation.removeClass('hidden');
+                        coloredChars.removeClass('hidden').addClass('color1');
+                        bgPresentation.removeClass('hidden');
+                    }
+                    
                 }
+
             }
 
-            if (scroll > windowHeight*2){
-                containerNav.removeClass('nocolor').addClass('bgcolor3');
-            }
-            else{
-                if(scroll < windowHeight){
-                containerNav.removeClass('bgcolor3').addClass('nocolor');
-                }
-                
-            }
-        }
-
-    })
+        })
 
 
     });
