@@ -26,16 +26,28 @@
 
         <!-- Section présentation des projets -->
 
-    <section id="projets" class="row slide2 slide2-sm color3 h100minusNav h100minusNav-sm bgOpacity95">
-        <div class="">
-            <h1 class="center">Parce que ce sont mes projets</h1>
-        </div>
-        <div class="container">
-            <div class="center card">
-                Test
+    <section id="projets" class="row slide2 slide2-sm color3 h100minusNav h100minusNav-sm bgOpacity95 center">
+        <div class="bg_keyboard_sm h125p-sm">        
+            <h3 class="center exo2 fs32">Projets</h3>
+        </div>    
+
+        <div class="owl-carousel center-align">
+            {% for projet in projets %}
+
+
+            <div class="item w300p">
+                <p class="fs24 bold center">{{ projet.name }}</p>
+                <hr class="w75p center">
+                <img src="{{ asset( projet.image )}}" alt="images projets" class="imgCarousel center">
+                <p class="fs20">{{ projet.infos }}</p>
+                <p class="fs20">{{ projet.technos }}</p>
+                <a href="{{ projet.url }}" class="fs20">Lien</a>
             </div>
+
+            {% endfor %}
         </div>
-        
     </section>
         
 {% endblock %}
+
+

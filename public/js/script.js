@@ -44,6 +44,31 @@ $('a[href^="#"]').on('click', function(event) {
   }); */
 
 
+/* ------------  Carousel ------------  */
+
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
+    $('select').formSelect();
+  });
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:10000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+});
 
 
 /* ------------  Changement sur scrolling ------------  */

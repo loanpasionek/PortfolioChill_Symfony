@@ -92,6 +92,7 @@ body{overflow-x:hidden;}
             .jccenter{justify-content: center;}
             .aicenter{align-items:center;}
             .txtcenter{text-align:center;}
+            .txtmiddle{vertical-align:middle;}
             .hidden{visibility:hidden;}
 
 
@@ -100,7 +101,7 @@ body{overflow-x:hidden;}
             .absolute{position:absolute;}
             .fixed{position:fixed;}
             .relative{position: relative;}
-    
+                
             .valign{position:absolute;
                     top:50%;
                     transform:translateY(-50%);}
@@ -118,6 +119,13 @@ body{overflow-x:hidden;}
                 writing-mode: tb-rl;
                 transform: rotate(-180deg);
                 }
+
+            .imgCarousel{
+                width:250px;
+                height:250px;
+            }
+                
+
             .row:last-child {
                 margin-bottom: 0;
             }
@@ -142,7 +150,7 @@ body{overflow-x:hidden;}
             }
             
             .slide2 {
-                background: url('../img/bg_pluie.jpg') center no-repeat fixed;
+                background: url('../img/keyboard2.jpg') center no-repeat fixed;
                 background-size: cover;
             }
 
@@ -182,6 +190,7 @@ body{overflow-x:hidden;}
     .mtop30p-sm{margin-top:0px;}
 
     .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
+    .bg_keyboard_sm{background:url('../img/bg_keyboard_1200.jpg') center fixed;}
 
     /* Parallax : background uni */
     .slide1{background-image:none;}
@@ -190,7 +199,7 @@ body{overflow-x:hidden;}
         background-color:#231202;
     }
     .slide2-sm {
-        background-color:purple;
+        background-color:#273F5D;
     }
 
     /* Fonts size en small, 20% moins grandes */
