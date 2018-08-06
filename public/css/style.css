@@ -30,8 +30,8 @@ body{overflow-x:hidden;}
 
 
             .color1{color: #E64A19 !important;} /* orange */
-            .color2{color:#757575;}
-            .color3{color:#E3E7E7;} /* blanc */
+            .color2{color:#757575;} /* gris foncé */
+            .color3{color:#E3E7E7;} /* gris */
             .color4{color:#2a2a2a !important;} /* noir */
             
 
@@ -42,7 +42,8 @@ body{overflow-x:hidden;}
             .bgcolor3{background-color:#3F51B5;} /* violet */
             .bgcolor4{background-color:#C94116;} /* orange foncé */
             .bgcolor5{background-color:#2a2a2a;} /* noir */
-            .bgcolor6{background-color:#231202;}
+            .bgcolor6{background-color:#231202;} /* bg de la nav mobile */
+            .bgcolor7{background-color:#f2f2f2;} /* blanc */
 
             
             .divider-color{ border-color: #BDBDBD; }
