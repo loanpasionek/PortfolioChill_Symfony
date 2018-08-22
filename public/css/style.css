@@ -33,6 +33,7 @@ body{overflow-x:hidden;}
             .color2{color:#757575;} /* gris foncé */
             .color3{color:#E3E7E7;} /* gris */
             .color4{color:#2a2a2a !important;} /* noir */
+            .color5{color:#14293E !important;} /* bleu foncé */
             
 
             /* Backgrounds */
@@ -51,7 +52,8 @@ body{overflow-x:hidden;}
                 transition: 0.5s linear;}
 
 /* ----------------------- Heights ----------------------- */
-
+            .maxH{height:calc(100vh - 55px);}
+            .h100{height:100%;}
             .h100vh{height:100vh;}
             .h100minusNav{height:calc(100vh - 64px);}
             .h660p{height:660px;}
@@ -65,6 +67,8 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Widths ----------------------- */
 
+            .w60{width:60%;}
+            .w33{width:33%;}
             .w300p{width:300px;}
             .w165p{width:165px;}
 
@@ -74,6 +78,7 @@ body{overflow-x:hidden;}
             .mtop45p{margin-top:45px;}
             .mtop30p{margin-top:30px;}
             .mtop20p{margin-top:20px;}
+            .mtop1p{margin-top:2px;}
             .mleft40p{margin-left:40px;}
             .pding15p{padding:15px;}
             .mAuto{margin:auto;}
@@ -115,7 +120,10 @@ body{overflow-x:hidden;}
 /* ----------------------- Spécifiques ----------------------- */
 
             
-            /* Ecriture verticale */
+            button{border:none;
+            background: #FF5722;}
+
+            /* --- Ecriture verticale --- */
             .rotated{
                 writing-mode: tb-rl;
                 transform: rotate(-180deg);
@@ -125,6 +133,8 @@ body{overflow-x:hidden;}
                 width:250px;
                 height:250px;
             }
+
+            /* --- Mur d'images --- */
             
             .grid { min-height: 500px; }
 
@@ -151,19 +161,37 @@ body{overflow-x:hidden;}
                 width: 100%;
             }
 
-            /* #imgCulture{
-                line-height: 0;
-                -webkit-column-count: 3;
-                -webkit-column-gap:   0px;
-                -moz-column-count:    3;
-                -moz-column-gap:      0px;
-                column-count:         3;
-                column-gap:           0px;  
-              } */
+            
 
+
+            /* --- Tooltip sur le mur d'images --- */
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+            }
+
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 125px;
+                background-color:#FF5722;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                font-size:1.1rem;
+             
+                position: absolute;
+                z-index: 1;
+            }
+            
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+                top:-25px;
+            }
               
 
-            #personnel img:hover{
+            .imgCulture:hover{
                     opacity:0.50;
                     transition:0.3s linear;
 
@@ -177,6 +205,7 @@ body{overflow-x:hidden;}
 
             nav{box-shadow: none;}
             .opacity95{opacity:0.95;}
+            .opacity20{opacity:0.20;}
             
 
             .bgOpacity95{background-color:#fff;
@@ -185,6 +214,8 @@ body{overflow-x:hidden;}
             a:hover{color:#FF5722 !important;}
 
             .faHover:hover{color:#FF5722 !important;}
+
+
 /* ----------------------- Parallax ----------------------- */
 
             .slide1 {
@@ -276,6 +307,8 @@ body{overflow-x:hidden;}
       line-height:50px;
       font-size:4rem;
     }
+
+    .w33-sm{width:33%;}
     .h125p-sm{height:125px;}
 
     .block-on-med-and-down{display: block;}

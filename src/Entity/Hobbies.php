@@ -36,6 +36,11 @@ class Hobbies
      */
     private $hob_class;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $category;
+
     public function getId()
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Hobbies
     public function setHobClass(string $hob_class): self
     {
         $this->hob_class = $hob_class;
+
+        return $this;
+    }
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(string $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

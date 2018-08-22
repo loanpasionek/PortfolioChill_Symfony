@@ -66,20 +66,35 @@
 
         <!-- Section personnelle -->
 
-    <section id="personnel" class="h100minusNav bgcolor7">
-                <p class="fs20 exo2 nomargin">Une partie un peu plus personnelle maintenant, avec les loisirs qui occupent ma vie.</p>
-    
-                <div id="imgCulture" class="grid container">
-                    {% for hobbie in hobbies %}        
-                        <div class="grid-item {{ hobbie.hobClass }}">
-                            <a href="http://{{ hobbie.hobUrl }}">
-                                <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class="imgCulture">
-                            </a>
-                        </div>
-                    {% endfor %}
+    <section id="culture" class="h100minusNav bgcolor7">
 
+
+        
+            
+        <p class="fs20 sunflower nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
+
+
+        <ul>
+            <button class=""><li id="btn-all">Tous</li></button>
+            <button><li id="btn-books">Littérature</li></button>
+            <button><li id="btn-video">Ciné / séries</li></button>
+            <button><li id="btn-sport">Sport</li></button>
+            <button><li id="btn-music">Musique</li></button>
+            <button><li id="btn-games">Jeux</li></button>
+        </ul>
+
+        <div class="grid w60 center">
+            {% for hobbie in hobbies %}        
+                <div class="grid-item {{ hobbie.hobClass }} tooltip w33-sm">
+                    <a href="{{ hobbie.hobUrl }}">
+                        <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class="imgCulture {{ hobbie.category }}">
+                        <span class="tooltiptext sunflower">{{ hobbie.hobName }}</span>
+                    </a>
                 </div>
-        </section>
+            {% endfor %}
+
+        </div>
+    </section>
 
         
     {% endblock %}
