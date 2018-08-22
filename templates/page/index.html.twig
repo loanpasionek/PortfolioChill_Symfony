@@ -26,9 +26,11 @@
 
         <!-- Section présentation des projets -->
 
-    <section id="projets" class="row slide2 slide2-sm color3 h100minusNav h100minusNav-sm center">
+    <section id="projets" class="row slide2 slide2-sm color3 h100vh h100minusNav-sm center">
         <div class="bg_keyboard_sm h125p-sm">        
-            <h3 class="center exo2 fs32">Projets</h3>
+            <p class="exo2 fs24 nomargin">Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code School, seul ou en groupe.
+                <br>
+            </p>
         </div>    
         <div class="row">
 
@@ -36,13 +38,13 @@
                 {% for projet in projets %}
 
 
-                <div class="item col l10 card bgcolor7 color1">
+                <div class="item col l11 card bgcolor7 color1">
 
                     <p class="fs24 bold">{{ projet.name }}</p>
                     <hr class="w75p center">
 
                     <br>
-                    <img src="{{ asset( projet.image )}}" alt="images projets" class="imgCarousel">
+                    <img src="{{ asset( projet.image )}}" alt="images projets" class="imgCarousel hide-on-small-only">
                     <div class="textjustify">
                         <p class="fs20"><span class="bold">Description :</span> <br>
                             {{ projet.infos }}
@@ -60,7 +62,27 @@
         </div>
 
     </section>
+
+
+        <!-- Section personnelle -->
+
+    <section id="personnel" class="h100minusNav bgcolor7">
+                <p class="fs20 exo2 nomargin">Une partie un peu plus personnelle maintenant, avec les loisirs qui occupent ma vie.</p>
+    
+                <div id="imgCulture" class="grid container">
+                    {% for hobbie in hobbies %}        
+                        <div class="grid-item {{ hobbie.hobClass }}">
+                            <a href="http://{{ hobbie.hobUrl }}">
+                                <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class="imgCulture">
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                </div>
+        </section>
+
         
-{% endblock %}
+    {% endblock %}
+
 
 

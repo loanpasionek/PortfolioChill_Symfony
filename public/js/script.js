@@ -55,7 +55,7 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     nav:false,
     autoplay:true,
-    autoplayTimeout:10000,
+    autoplayTimeout:5000,
     autoplayHoverPause:true,
     responsive:{
         0:{
@@ -134,6 +134,17 @@ $('.owl-carousel').owlCarousel({
             }
 
         })
+      
 
+});
 
-    });
+$(document).ready(function(){
+    /* Masonry */
+
+    $('.grid').masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.grid-item',
+      });
+});
+
+    

@@ -5,6 +5,8 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\Projets;
+use App\Entity\Hobbies;
+use Symfony\Component\HttpFoundation\Response;
 
 class PageController extends Controller
 {
@@ -14,17 +16,32 @@ class PageController extends Controller
     public function index()
     {
 
-        $repo = $this->getDoctrine()
-        ->getRepository(Projets::class);
+        $projets = $this->getDoctrine()
+    ->getRepository(Projets::class)
+    ->findAll();
 
-        $projets = $repo->findAll();
+$hobbies = $this->getDoctrine()
+    ->getRepository(Hobbies::class)
+    ->findAll();
+shuffle($hobbies);
 
-        /* print_r($projets); die(); */
 
-        return $this->render('page/index.html.twig', [
-            'controller_name' => 'PageController',
-            'projets' => $projets
-        ]);
+return $this->render('page/index.html.twig', [
+    'controller_name' => 'PageController',
+    'projets' => $projets,
+    'hobbies' => $hobbies
+]);
+
+    
+
+    }
+
+    /**
+     * @Route("/admin")
+     */
+    public function admin()
+    {
+        return new Response('<html><body>Admin page!</body></html>');
     }
 
 
