@@ -34,13 +34,14 @@ body{overflow-x:hidden;}
             .color3{color:#E3E7E7;} /* gris */
             .color4{color:#2a2a2a !important;} /* noir */
             .color5{color:#14293E !important;} /* bleu foncé */
+            .color6{color:#f2f2f2;}
             
 
             /* Backgrounds */
 
             .bgcolor1{background-color: #FF5722; } /* orange */
             .bgcolor2{background-color: #E3E7E7;} /* gris */
-            .bgcolor3{background-color:#3F51B5;} /* violet */
+            .bgcolor3{background-color:#14293E;} /* violet */
             .bgcolor4{background-color:#C94116;} /* orange foncé */
             .bgcolor5{background-color:#2a2a2a;} /* noir */
             .bgcolor6{background-color:#231202;} /* bg de la nav mobile */
@@ -66,9 +67,12 @@ body{overflow-x:hidden;}
 
 
 /* ----------------------- Widths ----------------------- */
-
+            
+            .w75{width:75%;}
             .w60{width:60%;}
             .w33{width:33%;}
+            .w25{width:25%;}
+            .w20{width:20%;}
             .w300p{width:300px;}
             .w165p{width:165px;}
 
@@ -91,6 +95,7 @@ body{overflow-x:hidden;}
             /* Display and justify */
 
             .flex{display: flex;}
+            .block{display:block;}
             .iblock{display: inline-block;}
             .column{ flex-direction:column;}
             .jcbetween{justify-content: space-between;}
@@ -119,9 +124,6 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Spécifiques ----------------------- */
 
-            
-            button{border:none;
-            background: #FF5722;}
 
             /* --- Ecriture verticale --- */
             .rotated{
@@ -133,6 +135,17 @@ body{overflow-x:hidden;}
                 width:250px;
                 height:250px;
             }
+
+            /* --- Style du menu pour le mur d'images --- */
+            button{width: 125px;
+            height: 30px;
+            margin:14px;
+            font-size:1.4rem;}
+            button:hover{cursor: pointer;}
+            button:active, button:focus{background-color:#FF5722;}
+
+            .noborder{border:none;}
+
 
             /* --- Mur d'images --- */
             
@@ -161,6 +174,29 @@ body{overflow-x:hidden;}
                 width: 100%;
             }
 
+            /* --- Split page --- */
+
+            .split {
+				height: 100%;
+				width: 50%;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				overflow-x: hidden;
+				padding-top: 20px;
+			}
+            
+            .left {
+                left: 0;
+                background: url('img/women_street.jpg') center no-repeat;
+                background-size:cover;
+                }
+    
+            .right {
+            right: 0;
+            background: url('img/women_office.jpg') center no-repeat;
+            background-size:cover;
+            }
             
 
 
@@ -179,7 +215,7 @@ body{overflow-x:hidden;}
                 text-align: center;
                 padding: 5px 0;
                 border-radius: 6px;
-                font-size:1.1rem;
+                font-size:1.2rem;
              
                 position: absolute;
                 z-index: 1;
@@ -188,6 +224,7 @@ body{overflow-x:hidden;}
             .tooltip:hover .tooltiptext {
                 visibility: visible;
                 top:-25px;
+                left:0;
             }
               
 
@@ -205,7 +242,10 @@ body{overflow-x:hidden;}
 
             nav{box-shadow: none;}
             .opacity95{opacity:0.95;}
-            .opacity20{opacity:0.20;}
+            .opacity20{opacity:0.20;
+            transition: 0.5s linear;}
+            .opacity100{opacity: 1;
+            transition: 0.5 linear;}
             
 
             .bgOpacity95{background-color:#fff;

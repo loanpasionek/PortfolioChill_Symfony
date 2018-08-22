@@ -176,52 +176,52 @@ $('.owl-carousel').owlCarousel(
         var games = $('.jeux');
 
         $('#btn-books').click(function(){
-            sport.addClass('opacity20');
-            video.addClass('opacity20');
-            games.addClass('opacity20');
-            music.addClass('opacity20');
-            books.removeClass('opacity20')
+            sport.addClass('opacity20').removeClass('opacity100');
+            video.addClass('opacity20').removeClass('opacity100');;
+            games.addClass('opacity20').removeClass('opacity100');;
+            music.addClass('opacity20').removeClass('opacity100');;
+            books.removeClass('opacity20').addClass('opacity100');
 
         });
 
         $('#btn-video').click(function(){
-            sport.addClass('opacity20');
-            books.addClass('opacity20');
-            games.addClass('opacity20');
-            music.addClass('opacity20');
-            video.removeClass('opacity20')
+            sport.addClass('opacity20').removeClass('opacity100');;
+            books.addClass('opacity20').removeClass('opacity100');;
+            games.addClass('opacity20').removeClass('opacity100');;
+            music.addClass('opacity20').removeClass('opacity100');;
+            video.removeClass('opacity20').addClass('opacity100');
 
         });
 
         $('#btn-sport').click(function(){
-            books.addClass('opacity20');
-            video.addClass('opacity20');
-            games.addClass('opacity20');
-            music.addClass('opacity20');
-            sport.removeClass('opacity20')
+            books.addClass('opacity20').removeClass('opacity100');;
+            video.addClass('opacity20').removeClass('opacity100');;
+            games.addClass('opacity20').removeClass('opacity100');;
+            music.addClass('opacity20').removeClass('opacity100');;
+            sport.removeClass('opacity20').addClass('opacity100');
         });
 
         $('#btn-music').click(function(){
-            sport.addClass('opacity20');
-            video.addClass('opacity20');
-            games.addClass('opacity20');
-            books.addClass('opacity20');
-            music.removeClass('opacity20')
+            sport.addClass('opacity20').removeClass('opacity100');;
+            video.addClass('opacity20').removeClass('opacity100');;
+            games.addClass('opacity20').removeClass('opacity100');;
+            books.addClass('opacity20').removeClass('opacity100');;
+            music.removeClass('opacity20').addClass('opacity100');
 
         });
 
         $('#btn-games').click(function(){
-            sport.addClass('opacity20');
-            video.addClass('opacity20');
-            books.addClass('opacity20');
-            music.addClass('opacity20');
-            games.removeClass('opacity20')
+            sport.addClass('opacity20').removeClass('opacity100');;
+            video.addClass('opacity20').removeClass('opacity100');;
+            books.addClass('opacity20').removeClass('opacity100');;
+            music.addClass('opacity20').removeClass('opacity100');;
+            games.removeClass('opacity20').addClass('opacity100');
 
         });
 
 
         $('#btn-all').click(function(){
-            all.removeClass('opacity20');
+            all.addClass('opacity100');
         });
 
     });
