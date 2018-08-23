@@ -137,10 +137,13 @@ body{overflow-x:hidden;}
             }
 
             /* --- Style du menu pour le mur d'images --- */
-            button{width: 125px;
+            button{
+            width: 125px;
             height: 30px;
             margin:14px;
-            font-size:1.4rem;}
+            font-size:1.4rem;
+            border-radius:6px;
+            }
             button:hover{cursor: pointer;}
             button:active, button:focus{background-color:#FF5722;}
 
@@ -294,6 +297,7 @@ body{overflow-x:hidden;}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    .fs20-mm{font-size:2rem;}
 
 }
 
@@ -306,7 +310,7 @@ body{overflow-x:hidden;}
     .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
     .bg_keyboard_sm{background:url('../img/bg_keyboard_1200.jpg') center fixed;}
 
-    /* Parallax : background uni */
+    /* Parallax : background uni en small */
     .slide1{background-image:none;}
     .slide2{background-image:none;}
     .slide1-sm {        
