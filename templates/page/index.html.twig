@@ -37,25 +37,25 @@
             <div class="owl-carousel col l12">
                 {% for projet in projets %}
 
+                <div class="center">
+                    <div class="item col l11 m10 s10 card bgcolor7 color1">
 
-                <div class="item col l11 m10 card bgcolor7 color1">
+                        <p class="fs24 fs24-sm bold">{{ projet.name }}</p>
+                        <hr class="w75p center">
 
-                    <p class="fs24 fs24-sm bold">{{ projet.name }}</p>
-                    <hr class="w75p center">
-
-                    <br>
-                    <img src="{{ asset( projet.image )}}" alt="images projets" class="imgCarousel hide-on-small-only">
-                    <div class="textjustify">
-                        <p class="fs20 fs20-sm"><span class="bold">Description :</span> <br>
-                            {{ projet.infos }}
-                        </p>
-                        <p class="fs20 fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
-                            {{ projet.technos }}
-                        </p>
-                        <a href="{{ projet.url }}" class="fs20 bold">Lien vers le projet</a>                
+                        <br>
+                        <img src="{{ asset( projet.image )}}" alt="images projets" class="imgCarousel hide-on-small-only">
+                        <div class="textjustify">
+                            <p class="fs20 fs20-sm"><span class="bold">Description :</span> <br>
+                                {{ projet.infos }}
+                            </p>
+                            <p class="fs20 fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
+                                {{ projet.technos }}
+                            </p>
+                            <button><a href="{{ projet.url }}" class="fs20 bold">Lien vers le projet</a></button>           
+                        </div>
                     </div>
                 </div>
-
                 {% endfor %}
             </div>
 
@@ -66,10 +66,10 @@
 
         <!-- Section personnelle -->
 
-    <!-- <section id="culture" class="h100minusNav bgcolor7">
+    <section id="culture" class="h100minusNav bgcolor7">
 
         <div class="flex block-on-med-and-down">
-            <div class="w20 center ">
+            <div class="w20 center center-sm">
                 <p class="fs20 sunflower nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
 
 
@@ -83,9 +83,9 @@
                 </ul>
             </div>
 
-            <div class="grid center">
+            <div class="grid w75 w100-sm">
                 {% for hobbie in hobbies %}        
-                    <div class="grid-item {{ hobbie.hobClass }} tooltip w33-sm">
+                    <div class="grid-item {{ hobbie.hobClass }} tooltip">
                         <a href="{{ hobbie.hobUrl }}" target="_blank">
                             <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class="imgCulture {{ hobbie.category }}">
                             <span class="tooltiptext sunflower">{{ hobbie.hobName }}</span>
@@ -95,7 +95,7 @@
 
             </div>
         </div>
-    </section> -->
+    </section>
 
         
     {% endblock %}

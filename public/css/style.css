@@ -137,13 +137,20 @@ body{overflow-x:hidden;}
             }
 
             /* --- Style du menu pour le mur d'images --- */
-            button{
+            #culture button{
             width: 125px;
             height: 30px;
             margin:14px;
             font-size:1.4rem;
             border-radius:6px;
             }
+            #projets button{
+                width: 190px;
+                margin:14px;
+                font-size:1.4rem;
+                border-radius:6px;
+                padding:5px;
+                }
             button:hover{cursor: pointer;}
             button:active, button:focus{background-color:#FF5722;}
 
@@ -152,7 +159,8 @@ body{overflow-x:hidden;}
 
             /* --- Mur d'images --- */
             
-            .grid { min-height: 500px; }
+            .grid { min-height: 500px; 
+            margin-top:30px;}
 
             .grid-item {
                 float: left;
@@ -226,7 +234,7 @@ body{overflow-x:hidden;}
             
             .tooltip:hover .tooltiptext {
                 visibility: visible;
-                top:-25px;
+                top:-28px;
                 left:0;
             }
               
@@ -266,11 +274,14 @@ body{overflow-x:hidden;}
 
             }
             
-            .slide2 {
+            /* .slide2 {
                 background: url('../img/keyboard2.jpg') center no-repeat fixed;
                 background-size: cover;
-            }
+            } */
 
+            .slide2{background-color:#14293E;}
+
+            
 
 /* ----------------------- Changement de nav selon position dans la page ----------------------- */
 
@@ -320,13 +331,14 @@ body{overflow-x:hidden;}
         background-color:#273F5D;
     }
 
+
     /* Fonts size en small, 20% moins grandes */
     .fs80-sm{font-size:6.4rem;}
     .fs60-sm{font-size:4.8rem;}
     .fs40-sm{font-size:3.2rem;}
     .fs36-sm{font-size:2.9rem;}
     .fs32-sm{font-size:2.6rem;}
-    .fs24-sm{font-size:1.9rem;}
+    .fs24-sm{font-size:1.85rem;}
     .fs20-sm{font-size:1.6rem;}
     .fs18-sm{font-size:1.4rem;}
     .fs15-sm{font-size:1.2rem;}
@@ -352,9 +364,14 @@ body{overflow-x:hidden;}
       font-size:4rem;
     }
 
-    .w33-sm{width:33%;}
+    .w100-sm{width:100%;}
     .h125p-sm{height:125px;}
-
+    .grid-item, .grid-item-lg, .grid-item-med{width:100px;}
+    .grid-item{height:43.5px;}
+    .grid-item-med{height:87px;}
+    .grid-item-lg{height:130.5px;}
+    
+    .flex-on-med-and-down{display:flex;}
     .block-on-med-and-down{display: block;}
     /* Annulation des classes appliquées au H1 en large-screen */
     .h1-sm{

@@ -29,7 +29,7 @@ $('a[href^="#"]').on('click', function(event) {
 
 
 /* Meme fonction sur écrans < 800 */
-
+/* 
 $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     var nav = $('nav').height();
@@ -45,7 +45,7 @@ $('a[href^="#"]').on('click', function(event) {
         }, 2000);
     }
 }
-});
+}); */
 
 /* ------------  Bouton flottant en small screen ------------  */
 
@@ -161,6 +161,24 @@ $('.owl-carousel').owlCarousel(
                         bgPresentation.removeClass('hidden');
                     }
                 
+                }
+
+                /* Si défilement sur dernière section */
+
+                if (scroll > windowHeight*3-navHeight*2)
+                {
+
+                    nav.addClass('navChange2');
+                    navText.addClass('color5');
+
+                }
+
+                else
+                {
+                    if(scroll <= windowHeight*3-navHeight){
+                        nav.removeClass('navChange2');
+                        navText.removeClass('color5');
+                    }
                 }
             }
         })
