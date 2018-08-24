@@ -365,16 +365,21 @@ html{font-size:62.5%;}
       font-size:4rem;
     }
 
+    /* Heights, widths, margins */
+
     .w100-sm{width:100%;}
     .w75-sm{width:75%;}
     .w300p-sm{width:300px;}
     .h125p-sm{height:125px;}
     .h100minusNav-sm{height:calc(100vh - 55px);}
     .mtop30p-sm{margin-top:30px;}
+    .mtop0-sm{margin-top:0;}
     .left8-sm{left:8%;}
 
 
     /* Mur d'images en small */
+    
+    .imgCulture{height:100%;}
     .grid-item, .grid-item-lg, .grid-item-med{width:100px;}
     .grid-item{height:43.5px;}
     .grid-item-med{height:87px;}
