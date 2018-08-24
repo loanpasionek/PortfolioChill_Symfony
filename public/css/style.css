@@ -1,6 +1,6 @@
 html{font-size:62.5%;}
-/* body{overflow-x:hidden;}
- */
+body{overflow-x:hidden;}
+
 
 
 /* ----------------------- Polices ----------------------- */
@@ -82,7 +82,7 @@ html{font-size:62.5%;}
             .mtop45p{margin-top:45px;}
             .mtop30p{margin-top:30px;}
             .mtop20p{margin-top:20px;}
-            .mtop1p{margin-top:2px;}
+            .mbot30p{margin-bottom:30px;}
             .mleft40p{margin-left:40px;}
             .pding15p{padding:15px;}
             .mAuto{margin:auto;}
@@ -162,7 +162,7 @@ html{font-size:62.5%;}
             .grid { min-height: 500px; 
             margin-top:30px;}
 
-            .grid-item {
+            .grid-item  {
                 float: left;
                 width: 125px;
                 height: 58px;
@@ -297,9 +297,11 @@ html{font-size:62.5%;}
 
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+
+@media only screen and (min-width : 1200px){
 
 }
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
@@ -317,7 +319,7 @@ html{font-size:62.5%;}
 
     .owl-dots{display:none;}
 
-    
+    .mbot30p-sm{margin-bottom:30px;}
 
     .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
     .bg_keyboard_sm{background:url('../img/bg_keyboard_1200.jpg') center fixed;}
@@ -380,7 +382,7 @@ html{font-size:62.5%;}
     /* Mur d'images en small */
     
     .imgCulture{height:100%;}
-    .grid-item, .grid-item-lg, .grid-item-med{width:100px;}
+    .grid-item, .grid-item-lg, .grid-item-med{width:33%;}
     .grid-item{height:43.5px;}
     .grid-item-med{height:87px;}
     .grid-item-lg{height:130.5px;}
@@ -396,5 +398,12 @@ html{font-size:62.5%;}
         writing-mode: horizontal-tb;
         transform: rotate(0deg);
         }
+}
+
+        /* Iphone 4 & 5 */
+@media screen and (max-width : 320px){
+
+    .w250p-xs{width:250px;}
+    .grid-item, .grid-item-lg, .grid-item-med{width:33%;}
 }
 

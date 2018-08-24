@@ -29,7 +29,7 @@ $('a[href^="#"]').on('click', function(event) {
 
 
 /* Meme fonction sur écrans < 800 */
-/* 
+
 $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     var nav = $('nav').height();
@@ -38,14 +38,14 @@ $('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
 
 
-        var scroll = target.offset().top;
+        var scroll = target.offset().top -nav;
         
         $('html, body').stop().animate({
             scrollTop: scroll
         }, 2000);
     }
 }
-}); */
+});
 
 /* ------------  Bouton flottant en small screen ------------  */
 
@@ -101,7 +101,7 @@ $('.owl-carousel').owlCarousel(
             
 
             /* Application de la fonction sur écrans larges > 800 */
-            if (screen.width > 800)
+            if (screen.width > 1200)
                 {
                     if (scroll > windowHeight-navHeight)
                     {
@@ -168,7 +168,7 @@ $('.owl-carousel').owlCarousel(
 
                 /* Si défilement sur dernière section */
 
-                if (scroll > windowHeight*3-navHeight)
+                if (scroll > windowHeight*3-navHeight*2)
                 {
 
                     nav.addClass('navChange2');
@@ -178,7 +178,7 @@ $('.owl-carousel').owlCarousel(
 
                 else
                 {
-                    if(scroll <= windowHeight*3-navHeight){
+                    if(scroll <= windowHeight*3-navHeight*2){
                         nav.removeClass('navChange2');
                         navText.removeClass('color5');
                     }
