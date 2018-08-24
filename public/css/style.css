@@ -1,6 +1,6 @@
 html{font-size:62.5%;}
-body{overflow-x:hidden;}
-
+/* body{overflow-x:hidden;}
+ */
 
 
 /* ----------------------- Polices ----------------------- */
@@ -315,8 +315,9 @@ body{overflow-x:hidden;}
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 
-    .h100minusNav-sm{height:calc(100vh - 55px);}
-    .mtop30p-sm{margin-top:0px;}
+    .owl-dots{display:none;}
+
+    
 
     .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
     .bg_keyboard_sm{background:url('../img/bg_keyboard_1200.jpg') center fixed;}
@@ -365,7 +366,15 @@ body{overflow-x:hidden;}
     }
 
     .w100-sm{width:100%;}
+    .w75-sm{width:75%;}
+    .w300p-sm{width:300px;}
     .h125p-sm{height:125px;}
+    .h100minusNav-sm{height:calc(100vh - 55px);}
+    .mtop30p-sm{margin-top:30px;}
+    .left8-sm{left:8%;}
+
+
+    /* Mur d'images en small */
     .grid-item, .grid-item-lg, .grid-item-med{width:100px;}
     .grid-item{height:43.5px;}
     .grid-item-med{height:87px;}

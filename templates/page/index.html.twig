@@ -68,12 +68,12 @@
 
     <section id="culture" class="h100minusNav bgcolor7">
 
-        <div class="flex block-on-med-and-down">
-            <div class="w20 center center-sm">
-                <p class="fs20 sunflower nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
+        <div class="flex block-on-med-and-down mtop30p-sm">
+            <div class="w20 w100-sm center center-sm">
+                <p class="fs20 w75-sm sunflower bold color5 nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
 
 
-                <ul class="center block">
+                <ul class="center block hide-on-small-only">
                     <button class="bgcolor3 color6 noborder"><li id="btn-all">Tous</li></button>
                     <button class="bgcolor3 color6 noborder"><li id="btn-books">Littérature</li></button>
                     <button class="bgcolor3 color6 noborder"><li id="btn-video">Ciné / séries</li></button>
@@ -83,7 +83,7 @@
                 </ul>
             </div>
 
-            <div class="grid w75 w100-sm">
+            <div class="grid left8-sm w75-sm">
                 {% for hobbie in hobbies %}        
                     <div class="grid-item {{ hobbie.hobClass }} tooltip">
                         <a href="{{ hobbie.hobUrl }}" target="_blank">

@@ -185,6 +185,8 @@ $('.owl-carousel').owlCarousel(
     });
 
 
+    /* ------------ Mur d'images ------------ */
+
     $(document).ready(function(){
         var all = $('.books, .video, .sport, .musique, .jeux');
         var books = $('.books');
@@ -192,7 +194,6 @@ $('.owl-carousel').owlCarousel(
         var sport = $('.sport');
         var music = $('.musique');
         var games = $('.jeux');
-
         $('#btn-books').click(function(){
             sport.addClass('opacity20').removeClass('opacity100');
             video.addClass('opacity20').removeClass('opacity100');;
@@ -243,3 +244,4 @@ $('.owl-carousel').owlCarousel(
         });
 
     });
+
