@@ -97,6 +97,9 @@ $('.owl-carousel').owlCarousel(
         {
             var scroll = $(window).scrollTop();
 
+
+            
+
             /* Application de la fonction sur écrans larges > 800 */
             if (screen.width > 800)
                 {
@@ -108,7 +111,7 @@ $('.owl-carousel').owlCarousel(
                     }
                     else
                     {
-                        if(scroll <= windowHeight-navHeight*2)
+                        if(scroll <= windowHeight-navHeight)
                         {
                         nav.removeClass('navChange').addClass('nocolor');
                         presentation.removeClass('hidden');
@@ -119,7 +122,7 @@ $('.owl-carousel').owlCarousel(
 
                     /* Si défilement sur dernière section */
 
-                    if (scroll > windowHeight*3-navHeight*2)
+                    if (scroll > windowHeight*3-navHeight-2)
                     {
 
                         nav.addClass('navChange2');
@@ -129,7 +132,7 @@ $('.owl-carousel').owlCarousel(
 
                     else
                     {
-                        if(scroll <= windowHeight*3-navHeight){
+                        if(scroll <= windowHeight*3-navHeight-2){
                             nav.removeClass('navChange2');
                             navText.removeClass('color5');
                         }
@@ -165,7 +168,7 @@ $('.owl-carousel').owlCarousel(
 
                 /* Si défilement sur dernière section */
 
-                if (scroll > windowHeight*3-navHeight*2)
+                if (scroll > windowHeight*3-navHeight)
                 {
 
                     nav.addClass('navChange2');
