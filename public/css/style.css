@@ -19,6 +19,7 @@ body{overflow-x:hidden;}
             .fs40{font-size:4rem;}
             .fs36{font-size:3.6rem;}
             .fs32{font-size:3.2rem;}
+            .fs28{font-size:2.8rem;}
             .fs24{font-size:2.4rem;}
             .fs20{font-size:2rem;}
             .fs18{font-size:1.8rem;}
@@ -164,25 +165,28 @@ body{overflow-x:hidden;}
 
             .grid-item  {
                 float: left;
-                width: 125px;
-                height: 58px;
+                width: 115px;
+                height: 53.75px;
             }
 
             .grid-item-med {
                 float: left;
-                width: 125px;
-                height: 116px;
+                width: 115px;
+                height: 107.5px;
             }
 
             .grid-item-lg {
                 float: left;
-                width: 125px;
-                height: 174px;
+                width: 115px;
+                height: 161.25px;
             }
 
             .imgCulture {
-                display: block;
                 width: 100%;
+
+                /* problème de hover qui décale l'image d'1px, réglé */
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
 
             /* --- Split page --- */
@@ -190,7 +194,6 @@ body{overflow-x:hidden;}
             .split {
 				height: 100%;
 				width: 50%;
-				position: fixed;
 				z-index: 1;
 				top: 0;
 				overflow-x: hidden;
@@ -199,14 +202,11 @@ body{overflow-x:hidden;}
             
             .left {
                 left: 0;
-                background: url('img/women_street.jpg') center no-repeat;
-                background-size:cover;
                 }
     
             .right {
             right: 0;
-            background: url('img/women_office.jpg') center no-repeat;
-            background-size:cover;
+            
             }
             
 
@@ -220,7 +220,7 @@ body{overflow-x:hidden;}
 
             .tooltip .tooltiptext {
                 visibility: hidden;
-                width: 125px;
+                width: 115px;
                 background-color:#FF5722;
                 color: #fff;
                 text-align: center;
