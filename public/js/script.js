@@ -74,10 +74,10 @@ $('.owl-carousel').owlCarousel(
                 items:1
             },
             600:{
-                items:2
+                items:1
             },
             1000:{
-                items:3
+                items:1
             }
         }
     });
@@ -103,7 +103,7 @@ $('.owl-carousel').owlCarousel(
             /* Application de la fonction sur écrans larges > 800 */
             if (screen.width > 1200)
                 {
-                    if (scroll > windowHeight-navHeight)
+                    if (scroll > windowHeight-navHeight-2)
                     {
                         nav.removeClass('nocolor').addClass('navChange');
                         presentation.addClass('hidden');
@@ -111,7 +111,7 @@ $('.owl-carousel').owlCarousel(
                     }
                     else
                     {
-                        if(scroll <= windowHeight-navHeight)
+                        if(scroll <= windowHeight-navHeight-2)
                         {
                         nav.removeClass('navChange').addClass('nocolor');
                         presentation.removeClass('hidden');
@@ -120,9 +120,9 @@ $('.owl-carousel').owlCarousel(
                         }
                     }
 
-                    /* Si défilement sur dernière section */
+                    /* Si défilement sur section culture */
 
-                    if (scroll > windowHeight*3-navHeight-2)
+                    if (scroll > windowHeight*2-navHeight-2)
                     {
 
                         nav.addClass('navChange2');
@@ -197,46 +197,32 @@ $('.owl-carousel').owlCarousel(
         var sport = $('.sport');
         var music = $('.musique');
         var games = $('.jeux');
+        
         $('#btn-books').click(function(){
-            sport.addClass('opacity20').removeClass('opacity100');
-            video.addClass('opacity20').removeClass('opacity100');;
-            games.addClass('opacity20').removeClass('opacity100');;
-            music.addClass('opacity20').removeClass('opacity100');;
+            all.addClass('opacity20').removeClass('opacity100');
             books.removeClass('opacity20').addClass('opacity100');
 
         });
 
         $('#btn-video').click(function(){
-            sport.addClass('opacity20').removeClass('opacity100');;
-            books.addClass('opacity20').removeClass('opacity100');;
-            games.addClass('opacity20').removeClass('opacity100');;
-            music.addClass('opacity20').removeClass('opacity100');;
+            all.addClass('opacity20').removeClass('opacity100');
             video.removeClass('opacity20').addClass('opacity100');
 
         });
 
         $('#btn-sport').click(function(){
-            books.addClass('opacity20').removeClass('opacity100');;
-            video.addClass('opacity20').removeClass('opacity100');;
-            games.addClass('opacity20').removeClass('opacity100');;
-            music.addClass('opacity20').removeClass('opacity100');;
+            all.addClass('opacity20').removeClass('opacity100');
             sport.removeClass('opacity20').addClass('opacity100');
         });
 
         $('#btn-music').click(function(){
-            sport.addClass('opacity20').removeClass('opacity100');;
-            video.addClass('opacity20').removeClass('opacity100');;
-            games.addClass('opacity20').removeClass('opacity100');;
-            books.addClass('opacity20').removeClass('opacity100');;
+            all.addClass('opacity20').removeClass('opacity100');
             music.removeClass('opacity20').addClass('opacity100');
 
         });
 
         $('#btn-games').click(function(){
-            sport.addClass('opacity20').removeClass('opacity100');;
-            video.addClass('opacity20').removeClass('opacity100');;
-            books.addClass('opacity20').removeClass('opacity100');;
-            music.addClass('opacity20').removeClass('opacity100');;
+            all.addClass('opacity20').removeClass('opacity100');
             games.removeClass('opacity20').addClass('opacity100');
 
         });
@@ -247,4 +233,3 @@ $('.owl-carousel').owlCarousel(
         });
 
     });
-
