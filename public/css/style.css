@@ -70,6 +70,7 @@ body{overflow-x:hidden;}
 /* ----------------------- Widths ----------------------- */
             
             .w75{width:75%;}
+            .w66{width:66%;}
             .w60{width:60%;}
             .w33{width:33%;}
             .w25{width:25%;}
@@ -114,9 +115,12 @@ body{overflow-x:hidden;}
             .fixed{position:fixed;}
             .relative{position: relative;}
                 
-            .valign{position:absolute;
+            .valign
+            {       
+                position:absolute;
                     top:50%;
-                    transform:translateY(-50%);}
+                transform:translateY(-50%);
+            }
 
             
             .textjustify{text-align:justify;}
@@ -127,25 +131,29 @@ body{overflow-x:hidden;}
 
 
             /* --- Ecriture verticale --- */
-            .rotated{
+            .rotated
+            {
                 writing-mode: tb-rl;
                 transform: rotate(-180deg);
                 }
 
-            .imgCarousel{
+            .imgCarousel
+            {
                 width:250px;
                 height:250px;
             }
 
             /* --- Style du menu pour le mur d'images --- */
-            #culture button{
+            #culture button
+            {
             width: 125px;
             height: 30px;
             margin:14px;
             font-size:1.4rem;
             border-radius:6px;
             }
-            #projets button{
+            #projets button
+            {
                 width: 190px;
                 margin:14px;
                 font-size:1.4rem;
@@ -154,14 +162,25 @@ body{overflow-x:hidden;}
                 }
             button:hover{cursor: pointer;}
             button:active, button:focus{background-color:#FF5722;}
+            #lienProjet:hover{transform: scale(1.1);
+            transition: 0.2s all ease;}
+            #lienProjet{
+                border-radius: 6px;
+                padding:5px;
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1.0, 1.0);
+            }
 
             .noborder{border:none;}
 
 
             /* --- Mur d'images --- */
             
-            .grid { min-height: 500px; 
-            margin-top:30px;}
+            .grid
+            { 
+                min-height: 500px; 
+                margin-top:70px;
+            }
 
             .grid-item  {
                 float: left;
@@ -181,17 +200,19 @@ body{overflow-x:hidden;}
                 height: 161.25px;
             }
 
-            .imgCulture {
+            .imgCulture 
+            {
                 width: 100%;
 
-                /* problème de hover qui décale l'image d'1px, réglé */
+                /* règle le problème de hover qui décale l'image d'1px*/
                 -webkit-backface-visibility: hidden;
                 -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
 
             /* --- Split page --- */
 
-            .split {
+            .split 
+            {
 				height: 100%;
 				width: 50%;
 				z-index: 1;
@@ -200,25 +221,22 @@ body{overflow-x:hidden;}
 				padding-top: 20px;
 			}
             
-            .left {
-                left: 0;
-                }
-    
-            .right {
-            right: 0;
+            .left{left: 0;}
             
-            }
+            .right {right: 0;}
             
 
 
             /* --- Tooltip sur le mur d'images --- */
 
-            .tooltip {
+            .tooltip 
+            {
                 position: relative;
                 display: inline-block;
             }
 
-            .tooltip .tooltiptext {
+            .tooltip .tooltiptext 
+            {
                 visibility: hidden;
                 width: 115px;
                 background-color:#FF5722;
@@ -227,29 +245,27 @@ body{overflow-x:hidden;}
                 padding: 5px 0;
                 border-radius: 6px;
                 font-size:1.2rem;
-             
                 position: absolute;
                 z-index: 1;
             }
             
-            .tooltip:hover .tooltiptext {
+            .tooltip:hover .tooltiptext 
+            {
                 visibility: visible;
                 top:-28px;
                 left:0;
             }
               
 
-            .imgCulture:hover{
+            .imgCulture:hover
+            {
                     opacity:0.50;
                     transition:0.3s linear;
 
             }
 
-            .row:last-child {
-                margin-bottom: 0;
-            }
+            .row:last-child, .row {margin-bottom: 0;}
 
-            .row{margin-bottom:0;}
 
             nav{box-shadow: none;}
             .opacity95{opacity:0.95;}
@@ -269,28 +285,29 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Parallax ----------------------- */
 
-            .slide1 {
+            .slide1 
+            {
                 background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;
 
             }
             
-            /* .slide2 {
-                background: url('../img/keyboard2.jpg') center no-repeat fixed;
-                background-size: cover;
-            } */
-
             .slide2{background-color:#14293E;}
 
             
 
 /* ----------------------- Changement de nav selon position dans la page ----------------------- */
 
-            .navChange{background-color:#E64A19;
+            .navChange
+            {
+                background-color:#E64A19;
             opacity:0.85;
-            transition: 0.5s linear;}
-            .navChange2{background-color:#E3E7E7;
+                transition: 0.5s linear;
+            }
+            .navChange2{
+                background-color:#E3E7E7;
             opacity:0.85;
-            transition: 0.5s linear;}
+                transition: 0.5s linear;
+            }
 
 
 /* ----------------------- Media queries ----------------------- */
@@ -346,13 +363,15 @@ body{overflow-x:hidden;}
     .fs18-sm{font-size:1.4rem;}
     .fs15-sm{font-size:1.2rem;}
 
-    .sidenav li>a{
+    .sidenav li>a
+    {
         font-size:1.8rem;
         padding:0 10px 0;
         margin: 10px 0;
         color:#E3E7E7;
     }
-    .sidenav li>a>i{
+    .sidenav li>a>i
+    {
         margin: -5px 0 10px;
         color:#E3E7E7;
     }
@@ -362,7 +381,9 @@ body{overflow-x:hidden;}
     .text-justify-sm{text-align: justify;}
 
 
-    #title{text-align:center;
+    #title
+    {
+        text-align:center;
       line-height:50px;
       font-size:4rem;
     }
@@ -372,6 +393,7 @@ body{overflow-x:hidden;}
     .w100-sm{width:100%;}
     .w75-sm{width:75%;}
     .w300p-sm{width:300px;}
+    .h100-sm{height:100%;}
     .h125p-sm{height:125px;}
     .h100minusNav-sm{height:calc(100vh - 55px);}
     .mtop30p-sm{margin-top:30px;}
@@ -390,7 +412,8 @@ body{overflow-x:hidden;}
     .flex-on-med-and-down{display:flex;}
     .block-on-med-and-down{display: block;}
     /* Annulation des classes appliquées au H1 en large-screen */
-    .h1-sm{
+    .h1-sm
+    {
         display:block;
         margin:0;
         font-size:3.2rem;

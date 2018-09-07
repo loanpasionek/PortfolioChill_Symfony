@@ -65,7 +65,7 @@ $('.owl-carousel').owlCarousel(
     {
         loop:true,
         nav:false,
-        autoplay:true,
+        autoplay:false,
         autoplayTimeout:5000,
         autoplayHoverPause:true,
         responsive:
@@ -168,7 +168,7 @@ $('.owl-carousel').owlCarousel(
 
                 /* Si défilement sur dernière section */
 
-                if (scroll > windowHeight*3-navHeight*2)
+                if (scroll > windowHeight*2-navHeight)
                 {
 
                     nav.addClass('navChange2');
