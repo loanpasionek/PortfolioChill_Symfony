@@ -9,92 +9,88 @@
         
     
 
-        <!-- Section présentation des projets -->
+    <!-- Section présentation des projets -->
 
-    <section id="work" class="card row color3 h100vh center">
-        <div class="split left">
-        
-            <div class="bg_keyboard_sm h125p-sm">        
-                <p class="exo2 fs24 fs24-sm nomargin">Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code School, seul ou en groupe.
+<section id="work" class="card bgcolor3 color3 h100vh center">
+    
+    <div class="bg_keyboard_sm h125p-sm">       
+        <h2 class="nomargin">Mes projets</h2> 
+        <p class="exo2 fs24 fs24-sm nomargin">Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code School, seul ou en groupe.
+            <br>
+        </p>
+    </div>    
+    
+        <div class="owl-carousel">
+            {% for projet in projets %}
+            <div class="center">
+                <div class="item w75 mleft40p color1">
+                    <p class="fs24 fs24-sm bold">{{ projet.name }}</p>
+                    <hr class="w75p center">
                     <br>
-                </p>
-            </div>    
-            <div class="row">
-
-                <div class="owl-carousel">
-                    {% for projet in projets %}
-
-                    <div class="center">
-                        <div class="item card bgcolor7 color1">
-
-                            <p class="fs24 fs24-sm bold">{{ projet.name }}</p>
-                            <hr class="w75p center">
-
-                            <br>
-                            <img src="{{ asset( projet.image )}}" alt="images projets" class="imgCarousel hide-on-small-only">
-                            <div class="textjustify">
-                                <p class="fs20 fs20-sm"><span class="bold">Description :</span> <br>
-                                    {{ projet.infos }}
-                                </p>
-                                <p class="fs20 fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
-                                    {{ projet.technos }}
-                                </p>
-                                <button><a href="{{ projet.url }}" target="_blank" class="fs20 bold">Lien vers le projet</a></button>           
-                            </div>
-                        </div>
+                    <a href="{{ projet.url }}" target="_blank">
+                    <img src="{{ asset( 'computer.png' )}}" alt="computer">
+                    <img src="{{ asset( projet.image )}}" alt="images projets" class="imgCarousel hide-on-small-only">
+                    </a>
+                    <div class="textjustify">
+                        <p class="fs20 fs20-sm"><span class="bold">Description :</span> <br>
+                            {{ projet.infos }}
+                        </p>
+                        <p class="fs20 fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
+                            {{ projet.technos }}
+                        </p>
+                        <button id="lienProjet"><a href="{{ projet.url }}" target="_blank" class="fs20 bold">Lien vers le projet</a></button>           
                     </div>
-                    {% endfor %}
                 </div>
-
             </div>
+            {% endfor %}
         </div>
-        <div class="split right">
-            <ul class="col l2 offset-l9 offset-m7 m3 s12 flex jcaround">
-                    <li><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color3"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color3"></i></a></li>
-                    <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color3"></i></a></li>
+    
+        <!-- <ul class="col l2 offset-l9 offset-m7 m3 s12 flex jcaround">
+                <li><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color3"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color3"></i></a></li>
+                <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color3"></i></a></li>
+        </ul> -->
+    
+</section>
+
+
+
+    <!-- Section personnelle -->
+
+<section id="culture" class="card nomargin h100minusNav h100-sm bgcolor7">
+
+    <div class="flex block-on-med-and-down">
+        <div class="w33 w100-sm center">
+            <p class="fs20 w75-sm sunflower bold color5 nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
+
+
+            <ul class="center block hide-on-small-only">
+                <button id="btn-all" class="bgcolor3 color6 noborder"><li>Tous</li></button>
+                <button id="btn-books" class="bgcolor3 color6 noborder"><li>Littérature</li></button>
+                <button id="btn-video" class="bgcolor3 color6 noborder"><li>Ciné / séries</li></button>
+                <button id="btn-sport" class="bgcolor3 color6 noborder"><li>Sport</li></button>
+                <button id="btn-music" class="bgcolor3 color6 noborder"><li>Musique</li></button>
+                <button id="btn-games" class="bgcolor3 color6 noborder"><li>Jeux</li></button>
             </ul>
         </div>
-    </section>
 
+        <div class="grid left8-sm w75 w300p-sm w250p-xs">
+            {% for hobbie in hobbies %}        
+                <div class="grid-item {{ hobbie.hobClass }} tooltip">
+                    <a href="{{ hobbie.hobUrl }}" target="_blank">
+                        <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class=" opacity100 imgCulture {{ hobbie.category }}">
+                        <span class="tooltiptext sunflower">{{ hobbie.hobName }}</span>
+                    </a>
+                </div>
+            {% endfor %}
 
-
-        <!-- Section personnelle -->
-
-    <section id="culture" class="h100minusNav bgcolor7">
-
-        <div class="flex block-on-med-and-down">
-            <div class="w33 w100-sm center">
-                <p class="fs20 w75-sm sunflower bold color5 nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
-
-
-                <ul class="center block hide-on-small-only">
-                    <button class="bgcolor3 color6 noborder"><li id="btn-all">Tous</li></button>
-                    <button class="bgcolor3 color6 noborder"><li id="btn-books">Littérature</li></button>
-                    <button class="bgcolor3 color6 noborder"><li id="btn-video">Ciné / séries</li></button>
-                    <button class="bgcolor3 color6 noborder"><li id="btn-sport">Sport</li></button>
-                    <button class="bgcolor3 color6 noborder"><li id="btn-music">Musique</li></button>
-                    <button class="bgcolor3 color6 noborder"><li id="btn-games">Jeux</li></button>
-                </ul>
-            </div>
-
-            <div class="grid left8-sm w60 w300p-sm w250p-xs">
-                {% for hobbie in hobbies %}        
-                    <div class="grid-item {{ hobbie.hobClass }} tooltip">
-                        <a href="{{ hobbie.hobUrl }}" target="_blank">
-                            <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class=" opacity100 imgCulture {{ hobbie.category }}">
-                            <span class="tooltiptext sunflower">{{ hobbie.hobName }}</span>
-                        </a>
-                    </div>
-                {% endfor %}
-
-            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     
-        
-    {% endblock %}
+{% endblock %}
 
 
 
