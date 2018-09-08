@@ -34,9 +34,10 @@ body{overflow-x:hidden;}
             .color2{color:#757575;} /* gris foncé */
             .color3{color:#E3E7E7;} /* gris */
             .color4{color:#2a2a2a !important;} /* noir */
-            .color5{color:#14293E !important;} /* bleu foncé */
+            .color5{color:#14293E !important;} /* violet */
             .color6{color:#f2f2f2;}
             
+        
 
             /* Backgrounds */
 
@@ -70,8 +71,8 @@ body{overflow-x:hidden;}
 /* ----------------------- Widths ----------------------- */
             
             .w75{width:75%;}
-            .w66{width:66%;}
             .w60{width:60%;}
+            .w50{width:50%;}
             .w33{width:33%;}
             .w25{width:25%;}
             .w20{width:20%;}
@@ -84,10 +85,17 @@ body{overflow-x:hidden;}
             .mtop45p{margin-top:45px;}
             .mtop30p{margin-top:30px;}
             .mtop20p{margin-top:20px;}
+            .mtop15p{margin-top:15px;}
+
             .mbot30p{margin-bottom:30px;}
+            .mbot20p{margin-bottom:20px;}
+
             .mleft40p{margin-left:40px;}
-            .pding15p{padding:15px;}
-            .mAuto{margin:auto;}
+
+            
+
+            .padd40p{padding:40px;}
+            
             .nomargin{margin: 0;}
             .nopadding{padding:0;}
 
@@ -137,16 +145,42 @@ body{overflow-x:hidden;}
                 transform: rotate(-180deg);
                 }
 
-            .imgCarousel
+            /* .imgCarousel
             {
-                width:250px;
-                height:250px;
+                width:260px !important;
+                height:115px;
+            } */
+
+            /* --- Split page --- */
+
+            .split 
+            {
+				height: 100%;
+				width: 50%;
+				z-index: 1;
+				top: 0;
+				overflow-x: hidden;
+				padding-top: 20px;
+			}
+            
+            .left{left: 0;}
+            
+            .right {right: 0;}
+
+            .h2padd{padding:40px 0;}
+            .hr-bold{border: 2px;}
+            #computer{
+                position: absolute;
+                width: 400px;
+                height: 400px;
             }
+
+            
 
             /* --- Style du menu pour le mur d'images --- */
             #culture button
             {
-            width: 125px;
+            width: 115px;
             height: 30px;
             margin:14px;
             font-size:1.4rem;
@@ -179,51 +213,31 @@ body{overflow-x:hidden;}
             .grid
             { 
                 min-height: 500px; 
-                margin-top:70px;
+                           }
+
+            .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
+            {
+                float: left;
+                width:115px;
             }
 
-            .grid-item  {
-                float: left;
-                width: 115px;
-                height: 53.75px;
-            }
+            .grid-item, .grid-item-med, .grid-item-lg {display: block;}
 
-            .grid-item-med {
-                float: left;
-                width: 115px;
-                height: 107.5px;
-            }
+            .grid-item {height: 53.75px;}
 
-            .grid-item-lg {
-                float: left;
-                width: 115px;
-                height: 161.25px;
-            }
+            .grid-item-med {height: 107.5px;}
+
+            .grid-item-lg {height: 161.25px;}
 
             .imgCulture 
             {
                 width: 100%;
-
                 /* règle le problème de hover qui décale l'image d'1px*/
                 -webkit-backface-visibility: hidden;
                 -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
 
-            /* --- Split page --- */
-
-            .split 
-            {
-				height: 100%;
-				width: 50%;
-				z-index: 1;
-				top: 0;
-				overflow-x: hidden;
-				padding-top: 20px;
-			}
             
-            .left{left: 0;}
-            
-            .right {right: 0;}
             
 
 
@@ -238,7 +252,6 @@ body{overflow-x:hidden;}
             .tooltip .tooltiptext 
             {
                 visibility: hidden;
-                width: 115px;
                 background-color:#FF5722;
                 color: #fff;
                 text-align: center;
@@ -381,14 +394,14 @@ body{overflow-x:hidden;}
     .text-justify-sm{text-align: justify;}
 
 
-    #title
+    .titleSection
     {
         text-align:center;
       line-height:50px;
       font-size:4rem;
     }
 
-    /* Heights, widths, margins */
+    /* Heights, widths, margins, paddings */
 
     .w100-sm{width:100%;}
     .w75-sm{width:75%;}
@@ -396,6 +409,8 @@ body{overflow-x:hidden;}
     .h100-sm{height:100%;}
     .h125p-sm{height:125px;}
     .h100minusNav-sm{height:calc(100vh - 55px);}
+
+    .padd40p-sm{padding:40px;}
     .mtop30p-sm{margin-top:30px;}
     .mtop0-sm{margin-top:0;}
     .left8-sm{left:8%;}
@@ -412,7 +427,7 @@ body{overflow-x:hidden;}
     .flex-on-med-and-down{display:flex;}
     .block-on-med-and-down{display: block;}
     /* Annulation des classes appliquées au H1 en large-screen */
-    .h1-sm
+    .h1-sm, .h2-sm
     {
         display:block;
         margin:0;
