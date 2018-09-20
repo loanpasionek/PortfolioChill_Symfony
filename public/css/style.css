@@ -6,6 +6,7 @@ body{overflow-x:hidden;}
 /* ----------------------- Polices ----------------------- */
 
             /* Familles */
+
             .sunflower{font-family: 'Sunflower', sans-serif;}
             .karma{font-family: 'Karma', serif;}
             .exo2{font-family:'Exo 2', sans-serif;}
@@ -14,6 +15,7 @@ body{overflow-x:hidden;}
             /* Tailles */
 
             .bold{font-weight:700;}
+            .semi-bold{font-weight: 600;}
             .fs80{font-size:8rem;}
             .fs60{font-size:6rem;}
             .fs40{font-size:4rem;}
@@ -34,25 +36,28 @@ body{overflow-x:hidden;}
             .color2{color:#757575;} /* gris foncé */
             .color3{color:#E3E7E7;} /* gris */
             .color4{color:#2a2a2a !important;} /* noir */
-            .color5{color:#14293E !important;} /* violet */
+            .color5{color:#14293E !important;} /* bleu */
             .color6{color:#f2f2f2;}
-            
-        
+                    
 
             /* Backgrounds */
 
             .bgcolor1{background-color: #FF5722; } /* orange */
             .bgcolor2{background-color: #E3E7E7;} /* gris */
-            .bgcolor3{background-color:#14293E;} /* violet */
+            .bgcolor3{background-color:#14293E;} /* bleu */
             .bgcolor4{background-color:#C94116;} /* orange foncé */
             .bgcolor5{background-color:#2a2a2a;} /* noir */
             .bgcolor6{background-color:#231202;} /* bg de la nav mobile */
             .bgcolor7{background-color:#f2f2f2;} /* blanc */
+            .bgcolor8{background-color: #757575;}
 
             
             .divider-color{ border-color: #BDBDBD; }
-            .nocolor{background: none;
-                transition: 0.5s linear;}
+            .nav-nocolor
+            {
+                background: none;
+                transition: 0.5s linear;
+            }
 
 /* ----------------------- Heights ----------------------- */
             .maxH{height:calc(100vh - 55px);}
@@ -69,13 +74,16 @@ body{overflow-x:hidden;}
 
 
 /* ----------------------- Widths ----------------------- */
-            
+            .w100{width:100%;}
             .w75{width:75%;}
+            .w70{width:70%;}
+            .w66{width:66%;}
             .w60{width:60%;}
             .w50{width:50%;}
             .w33{width:33%;}
             .w25{width:25%;}
             .w20{width:20%;}
+            .w15{width:15%}
             .w300p{width:300px;}
             .w165p{width:165px;}
 
@@ -86,15 +94,18 @@ body{overflow-x:hidden;}
             .mtop30p{margin-top:30px;}
             .mtop20p{margin-top:20px;}
             .mtop15p{margin-top:15px;}
+            .mtop2p{margin-top:2px;}
 
             .mbot30p{margin-bottom:30px;}
             .mbot20p{margin-bottom:20px;}
 
             .mleft40p{margin-left:40px;}
+            .mleft2p{margin-left:2px;}
 
             
 
             .padd40p{padding:40px;}
+            .padd20p{padding:20px;}
             
             .nomargin{margin: 0;}
             .nopadding{padding:0;}
@@ -137,7 +148,7 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Spécifiques ----------------------- */
 
-
+            .mh2200{max-height: 2200px;}
             /* --- Ecriture verticale --- */
             .rotated
             {
@@ -174,51 +185,70 @@ body{overflow-x:hidden;}
                 width: 400px;
                 height: 400px;
             }
+            
+            .noborder{border:none;}
 
+            nav ul a:focus::after{border-bottom: 1px solid blue;}
+
+/* ----------------------- Mur d'images ----------------------- */
             
 
             /* --- Style du menu pour le mur d'images --- */
+
             #culture button
             {
             width: 115px;
             height: 30px;
             margin:14px;
             font-size:1.4rem;
-            border-radius:6px;
+            border-radius:2px;
             }
             #projets button
             {
                 width: 190px;
                 margin:14px;
                 font-size:1.4rem;
-                border-radius:6px;
+                border-radius:2px;
                 padding:5px;
-                }
+            }
+
+
+            
             button:hover{cursor: pointer;}
-            button:active, button:focus{background-color:#FF5722;}
-            #lienProjet:hover{transform: scale(1.1);
-            transition: 0.2s all ease;}
-            #lienProjet{
-                border-radius: 6px;
+            button:active, button:focus
+            {
+                background-color:#f2f2f2;
+                border: 1px solid #14293E;
+                
+            }
+            
+            button:active li, button:focus li{
+                color:#14293E;
+}
+
+            #lienProjet:hover
+            {
+                transform: scale(1.1);
+                transition: 0.2s all ease;
+            }
+            #lienProjet
+            {
+                border-radius: 2px;
                 padding:5px;
                 -webkit-backface-visibility: hidden;
                 -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
-
-            .noborder{border:none;}
-
-
-            /* --- Mur d'images --- */
+          
             
-            .grid
-            { 
-                min-height: 500px; 
-                           }
+            .grid{min-height: 500px;
+            /* margin-top: 45px; */
+            }
 
             .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
             {
                 float: left;
                 width:115px;
+                margin-bottom: 0;
             }
 
             .grid-item, .grid-item-med, .grid-item-lg {display: block;}
@@ -229,6 +259,7 @@ body{overflow-x:hidden;}
 
             .grid-item-lg {height: 161.25px;}
 
+           
             .imgCulture 
             {
                 width: 100%;
@@ -236,10 +267,6 @@ body{overflow-x:hidden;}
                 -webkit-backface-visibility: hidden;
                 -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
-
-            
-            
-
 
             /* --- Tooltip sur le mur d'images --- */
 
@@ -288,8 +315,11 @@ body{overflow-x:hidden;}
             transition: 0.5 linear;}
             
 
-            .bgOpacity95{background-color:#fff;
-                opacity:0.95;}
+            .bgOpacity95
+            {
+                background-color:#fff;
+                opacity:0.95;
+            }
 
             a:hover{color:#FF5722 !important;}
 
@@ -313,12 +343,12 @@ body{overflow-x:hidden;}
             .navChange
             {
                 background-color:#E64A19;
-            opacity:0.85;
+                opacity:0.85;
                 transition: 0.5s linear;
             }
             .navChange2{
-                background-color:#E3E7E7;
-            opacity:0.85;
+                background-color:#14293E;
+                opacity:0.85;
                 transition: 0.5s linear;
             }
 
@@ -351,18 +381,18 @@ body{overflow-x:hidden;}
 
     .mbot30p-sm{margin-bottom:30px;}
 
-    .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
-    .bg_keyboard_sm{background:url('../img/bg_keyboard_1200.jpg') center fixed;}
+    /* .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
+    .bg_keyboard_sm{background:url('../img/bg_keyboard_1200.jpg') center fixed;} */
 
     /* Parallax : background uni en small */
-    .slide1{background-image:none;}
+    /* .slide1{background-image:none;}
     .slide2{background-image:none;}
     .slide1-sm {        
         background-color:#231202;
     }
     .slide2-sm {
         background-color:#273F5D;
-    }
+    } */
 
 
     /* Fonts size en small, 20% moins grandes */
@@ -397,8 +427,8 @@ body{overflow-x:hidden;}
     .titleSection
     {
         text-align:center;
-      line-height:50px;
-      font-size:4rem;
+        line-height:50px;
+        font-size:4rem;
     }
 
     /* Heights, widths, margins, paddings */
@@ -413,6 +443,7 @@ body{overflow-x:hidden;}
     .padd40p-sm{padding:40px;}
     .mtop30p-sm{margin-top:30px;}
     .mtop0-sm{margin-top:0;}
+    .center-sm{margin:auto;}
     .left8-sm{left:8%;}
 
 

@@ -8,7 +8,10 @@ $(document).ready(function(){
         // set itemSelector so .grid-sizer is not used in layout
         itemSelector: '.grid-item',
       });
+
 });
+
+
 
 /* ------------  Smooth scrolling ------------ */
 
@@ -97,9 +100,6 @@ $('.owl-carousel').owlCarousel(
         {
             var scroll = $(window).scrollTop();
 
-
-            
-
             /* Application de la fonction sur écrans larges > 800 */
             if (screen.width > 1200)
                 {
@@ -126,7 +126,7 @@ $('.owl-carousel').owlCarousel(
                     {
 
                         nav.addClass('navChange2');
-                        navText.addClass('color5');
+                        navText.addClass('color6');
 
                     }
 
@@ -134,7 +134,7 @@ $('.owl-carousel').owlCarousel(
                     {
                         if(scroll <= windowHeight*3-navHeight-2){
                             nav.removeClass('navChange2');
-                            navText.removeClass('color5');
+                            navText.removeClass('color6');
                         }
                     }
                     
@@ -172,7 +172,7 @@ $('.owl-carousel').owlCarousel(
                 {
 
                     nav.addClass('navChange2');
-                    navText.addClass('color5');
+                    navText.addClass('color6');
 
                 }
 
@@ -180,7 +180,7 @@ $('.owl-carousel').owlCarousel(
                 {
                     if(scroll <= windowHeight*3-navHeight*2){
                         nav.removeClass('navChange2');
-                        navText.removeClass('color5');
+                        navText.removeClass('color6');
                     }
                 }
             }

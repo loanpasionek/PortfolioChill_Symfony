@@ -18,7 +18,7 @@
             <h2 class="nomargin sunflower rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p">Work</h2>
                 
         </div>  
-        <div class="col l5 offset-l6 offset-m4 m6 fs28  right-align">
+        <div class="col l5 offset-l6 offset-m4 m6 fs28 right-align">
                 <p class="fs20-mm fs24-sm fs24-xs color3 text-justify-sm padd40p">
             
                 Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code
@@ -39,7 +39,7 @@
             {% for projet in projets %}
             <div class="">
                 <div class="item mleft40p color1">
-                    <div class="col l6 s12">
+                    <div class="col l5 s12">
                         <!-- <hr class="w75p center"> -->
                         <br>
                         <a href="{{ projet.url }}" target="_blank">
@@ -47,7 +47,7 @@
                         <img src="{{ asset( projet.image )}}" alt="images projets" class="col l8 s12 imgCarousel">
                         </a>
                     </div>
-                    <div class="col l6 s12">
+                    <div class="col l5 s12">
                         <div class="w75">
                             <p class="fs24 fs24-sm bold">{{ projet.name }}</p>
                             <div class="textjustify">
@@ -74,34 +74,36 @@
 
     <!-- Section personnelle -->
 
-<section id="culture" class="card nomargin h100minusNav h100-sm sunflower bgcolor7">
-        <h3 class="nomargin rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p">Culture</h3>
+<section id="culture" class="card nomargin h100vh h100-sm sunflower bgcolor8">
+        
 
     <div class="flex block-on-med-and-down">
+            <h3 class="nomargin rotated fs80 fs80-sm titleSection color5 h2padd h2-sm mtop30p right-align">Culture</h3>
+        <div class="w100-sm w100 mtop30p row">
+            <div>
+                <p class="fs20 fs32-sm w75-sm bold color5 nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
+            
+                <ul class="col offset-l1 flex hide-on-small-only">
+                    <button id="btn-all" class="bgcolor3 color6 semi-bold noborder"><li>Tous</li></button>
+                    <button id="btn-books" class="bgcolor3 color6 semi-bold noborder"><li>Littérature</li></button>
+                    <button id="btn-video" class="bgcolor3 color6 semi-bold noborder"><li>Ciné / séries</li></button>
+                    <button id="btn-sport" class="bgcolor3 color6 semi-bold noborder"><li>Sport</li></button>
+                    <button id="btn-music" class="bgcolor3 color6 semi-bold noborder"><li>Musique</li></button>
+                    <button id="btn-games" class="bgcolor3 color6 semi-bold noborder"><li>Jeux</li></button>
+                </ul>
+            </div>
 
-        <div class="w33 w100-sm center mtop30p">
-            <p class="fs20 fs32-sm w75-sm  bold color5 nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
-           
-            <ul class="center block hide-on-small-only">
-                <button id="btn-all" class="bgcolor3 color6 noborder"><li>Tous</li></button>
-                <button id="btn-books" class="bgcolor3 color6 noborder"><li>Littérature</li></button>
-                <button id="btn-video" class="bgcolor3 color6 noborder"><li>Ciné / séries</li></button>
-                <button id="btn-sport" class="bgcolor3 color6 noborder"><li>Sport</li></button>
-                <button id="btn-music" class="bgcolor3 color6 noborder"><li>Musique</li></button>
-                <button id="btn-games" class="bgcolor3 color6 noborder"><li>Jeux</li></button>
-            </ul>
-        </div>
+            <div class="grid col l10 offset-l1 center left8-sm w300p-sm w250p-xs mh2200">
+                {% for hobbie in hobbies %}
+                    <div class="grid-item mleft2p mtop2p {{ hobbie.hobClass }} tooltip">
+                        <a href="{{ hobbie.hobUrl }}" target="_blank">
+                            <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class="opacity100 imgCulture {{ hobbie.category }}">
+                            <span class="tooltiptext sunflower">{{ hobbie.hobName }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
 
-        <div class="grid left8-sm w75 w300p-sm w250p-xs">
-            {% for hobbie in hobbies %}        
-                <div class="grid-item {{ hobbie.hobClass }} tooltip">
-                    <a href="{{ hobbie.hobUrl }}" target="_blank">
-                        <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class=" opacity100 imgCulture {{ hobbie.category }}">
-                        <span class="tooltiptext sunflower">{{ hobbie.hobName }}</span>
-                    </a>
-                </div>
-            {% endfor %}
-
+            </div>
         </div>
     </div>
 </section>
