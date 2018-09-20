@@ -67,7 +67,7 @@ $('a[href^="#"]').on('click', function(event) {
 $('.owl-carousel').owlCarousel(
     {
         loop:true,
-        nav:false,
+        nav:true,
         autoplay:false,
         autoplayTimeout:5000,
         autoplayHoverPause:true,
@@ -107,7 +107,7 @@ $('.owl-carousel').owlCarousel(
                     {
                         nav.removeClass('nocolor').addClass('navChange');
                         presentation.addClass('hidden');
-                        coloredChars.addClass('hidden');
+                        /* coloredChars.addClass('hidden'); */
                     }
                     else
                     {
@@ -115,7 +115,7 @@ $('.owl-carousel').owlCarousel(
                         {
                         nav.removeClass('navChange').addClass('nocolor');
                         presentation.removeClass('hidden');
-                        coloredChars.removeClass('hidden');
+                        /* coloredChars.removeClass('hidden'); */
 
                         }
                     }

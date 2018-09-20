@@ -1,5 +1,5 @@
 html{font-size:62.5%;}
-body{overflow-x:hidden;}
+/* body{overflow-x:hidden;} */
 
 
 
@@ -137,7 +137,7 @@ body{overflow-x:hidden;}
             .valign
             {       
                 position:absolute;
-                    top:50%;
+                top:50%;
                 transform:translateY(-50%);
             }
 
@@ -147,8 +147,53 @@ body{overflow-x:hidden;}
 
 
 /* ----------------------- Spécifiques ----------------------- */
+            /* ------------ Mur d'images ------------ */
+            
 
-            .mh2200{max-height: 2200px;}
+            #culture button
+            {
+            width: 115px;
+            height: 30px;
+            margin:14px;
+            font-size:1.4rem;
+            border-radius:2px;
+            }
+            #projets button
+            {
+                width: 190px;
+                margin:14px;
+                font-size:1.4rem;
+                border-radius:2px;
+                padding:5px;
+            }
+
+            .grid{min-height: 500px;}
+    
+            .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
+            {
+                float: left;
+                width:115px;
+                margin-bottom: 0;
+            }
+
+            .grid-item, .grid-item-med, .grid-item-lg {display: block;}
+
+            .grid-item {height: 53.75px;}
+
+            .grid-item-med {height: 107.5px;}
+
+            .grid-item-lg {height: 161.25px;}
+
+            
+            .imgCulture 
+            {
+                width: 100%;
+                /* règle le problème de hover qui décale l'image d'1px*/
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1.0, 1.0);
+            }
+
+
             /* --- Ecriture verticale --- */
             .rotated
             {
@@ -190,29 +235,6 @@ body{overflow-x:hidden;}
 
             nav ul a:focus::after{border-bottom: 1px solid blue;}
 
-/* ----------------------- Mur d'images ----------------------- */
-            
-
-            /* --- Style du menu pour le mur d'images --- */
-
-            #culture button
-            {
-            width: 115px;
-            height: 30px;
-            margin:14px;
-            font-size:1.4rem;
-            border-radius:2px;
-            }
-            #projets button
-            {
-                width: 190px;
-                margin:14px;
-                font-size:1.4rem;
-                border-radius:2px;
-                padding:5px;
-            }
-
-
             
             button:hover{cursor: pointer;}
             button:active, button:focus
@@ -239,34 +261,7 @@ body{overflow-x:hidden;}
                 -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
           
-            
-            .grid{min-height: 500px;
-            /* margin-top: 45px; */
-            }
-
-            .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
-            {
-                float: left;
-                width:115px;
-                margin-bottom: 0;
-            }
-
-            .grid-item, .grid-item-med, .grid-item-lg {display: block;}
-
-            .grid-item {height: 53.75px;}
-
-            .grid-item-med {height: 107.5px;}
-
-            .grid-item-lg {height: 161.25px;}
-
-           
-            .imgCulture 
-            {
-                width: 100%;
-                /* règle le problème de hover qui décale l'image d'1px*/
-                -webkit-backface-visibility: hidden;
-                -webkit-transform: translateZ(0) scale(1.0, 1.0);
-            }
+        
 
             /* --- Tooltip sur le mur d'images --- */
 
@@ -309,33 +304,36 @@ body{overflow-x:hidden;}
 
             nav{box-shadow: none;}
             .opacity95{opacity:0.95;}
-            .opacity20{opacity:0.20;
-            transition: 0.5s linear;}
-            .opacity100{opacity: 1;
-            transition: 0.5 linear;}
-            
-
-            .bgOpacity95
+            .opacity20
             {
-                background-color:#fff;
-                opacity:0.95;
+                opacity:0.20;
+                transition: 0.5s linear;
             }
+            .opacity100
+            {
+                opacity: 1;
+                transition: 0.5 linear;
+            }
+            
 
             a:hover{color:#FF5722 !important;}
 
             .faHover:hover{color:#FF5722 !important;}
-
 
 /* ----------------------- Parallax ----------------------- */
 
             .slide1 
             {
                 background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;
-
+                opacity: 0.95;
             }
             
-            .slide2{background-color:#14293E;}
+            /* .slide2{background-color:#14293E;} */
 
+            .slide2
+            {
+                background: url('../img/bg_keyboard.jpg') center no-repeat fixed;
+            }
             
 
 /* ----------------------- Changement de nav selon position dans la page ----------------------- */
@@ -377,7 +375,7 @@ body{overflow-x:hidden;}
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 
-    .owl-dots{display:none;}
+    
 
     .mbot30p-sm{margin-bottom:30px;}
 
