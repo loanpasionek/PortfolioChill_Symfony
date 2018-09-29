@@ -11,22 +11,22 @@
 
     <!-- Section présentation des projets -->
 
-<section id="work" class="nomargin card slide2 color3 h100vh">
-    <div class="row">
+<section id="work" class="nomargin card slide2 h100vh">
+    <div class="row bgcolor5">
         <div class="col exo2 bg_keyboard_sm h125p-sm"> 
                         
-            <h2 class="nomargin sunflower rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p">Work</h2>
+            <h2 class="color5 nomargin sunflower rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p">Work</h2>
                 
         </div>  
-        <div class="col l5 offset-l6 offset-m4 m6 fs28 right-align">
-                <p class="fs20-mm fs24-sm fs24-xs color3 text-justify-sm padd40p">
+        <div class="col l5 offset-l6 offset-m4 m6 fs24 right-align ">
+                <p class="fs20-mm fs24-sm fs24-xs color5 text-justify-sm padd40p">
                 Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code
                 School, seul ou en groupe.
                 </p>
             <ul class="col offset-l9 offset-m7 m3 s12 flex jcaround">
-                    <li><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color3"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color3"></i></a></li>
-                    <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color3"></i></a></li>
+                    <li><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color5"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color5"></i></a></li>
+                    <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color5"></i></a></li>
             </ul>
         </div> 
 
@@ -37,7 +37,7 @@
         <div class="owl-carousel">
             {% for projet in projets %}
             <div class="">
-                <div class="item mleft40p color1">
+                <div class="item mleft40p color6">
                     <div class="col l5 s12">
                         <!-- <hr class="w75p center"> -->
                         <br>
@@ -73,26 +73,27 @@
 
     <!-- Section personnelle -->
 
-<section id="culture" class="card nomargin h100vh h100-sm sunflower bgcolor8">
+<section id="hobbies" class="card nomargin h100vh h100-sm sunflower slide3">
         
 
     <div class="flex block-on-med-and-down">
-            <h3 class="nomargin rotated fs80 fs80-sm titleSection color5 h2padd h2-sm mtop30p right-align">Culture</h3>
-        <div class="w100-sm w100 mtop30p row">
-            <div>
-                <p class="fs20 fs32-sm w75-sm bold color5 nomargin center">Section un peu plus personnelle avec mes hobbies !</p>
-            
-                <ul class="col offset-l1 flex hide-on-small-only">
-                    <button id="btn-all" class="bgcolor3 color6 semi-bold noborder"><li>Tous</li></button>
-                    <button id="btn-books" class="bgcolor3 color6 semi-bold noborder"><li>Littérature</li></button>
-                    <button id="btn-video" class="bgcolor3 color6 semi-bold noborder"><li>Ciné / séries</li></button>
-                    <button id="btn-sport" class="bgcolor3 color6 semi-bold noborder"><li>Sport</li></button>
-                    <button id="btn-music" class="bgcolor3 color6 semi-bold noborder"><li>Musique</li></button>
-                    <button id="btn-games" class="bgcolor3 color6 semi-bold noborder"><li>Jeux</li></button>
+            <h3 class="nomargin rotated fs80 fs80-sm titleSection color6 h2padd h2-sm mtop30p right-align">Hobbies</h3>
+        <div class="w100-sm flex w100 row padd40p">
+            <div class="w25">
+                    <p class="fs24 fs32-sm w75-sm bold color6 nomargin center">Et à part le boulot ?</p>
+
+                <ul class="hide-on-small-only center">
+                    <button id="btn-all" class="bgcolor9 color6 semi-bold noborder"><li>Tous</li></button>
+                    <button id="btn-books" class="bgcolor9 color6 semi-bold noborder"><li>Littérature</li></button>
+                    <button id="btn-video" class="bgcolor9 color6 semi-bold noborder"><li>Ciné / séries</li></button>
+                    <button id="btn-sport" class="bgcolor9 color6 semi-bold noborder"><li>Sport</li></button>
+                    <button id="btn-music" class="bgcolor9 color6 semi-bold noborder"><li>Musique</li></button>
+                    <button id="btn-games" class="bgcolor9 color6 semi-bold noborder"><li>Jeux</li></button>
                 </ul>
             </div>
 
-            <div class="grid col l10 offset-l1 center left8-sm w300p-sm w250p-xs">
+
+            <div class="grid w75 left8-sm w300p-sm w250p-xs">
                 {% for hobbie in hobbies %}
                     <div class="grid-item mleft2p mtop2p {{ hobbie.hobClass }} tooltip">
                         <a href="{{ hobbie.hobUrl }}" target="_blank">
@@ -101,7 +102,6 @@
                         </a>
                     </div>
                 {% endfor %}
-
             </div>
         </div>
     </div>

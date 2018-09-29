@@ -67,8 +67,8 @@ $('a[href^="#"]').on('click', function(event) {
 $('.owl-carousel').owlCarousel(
     {
         loop:true,
-        nav:true,
-        autoplay:false,
+        nav:false,
+        autoplay:true,
         autoplayTimeout:5000,
         autoplayHoverPause:true,
         responsive:
@@ -107,7 +107,7 @@ $('.owl-carousel').owlCarousel(
                     {
                         nav.removeClass('nocolor').addClass('navChange');
                         presentation.addClass('hidden');
-                        /* coloredChars.addClass('hidden'); */
+                        coloredChars.addClass('hidden');
                     }
                     else
                     {
@@ -115,7 +115,7 @@ $('.owl-carousel').owlCarousel(
                         {
                         nav.removeClass('navChange').addClass('nocolor');
                         presentation.removeClass('hidden');
-                        /* coloredChars.removeClass('hidden'); */
+                        coloredChars.removeClass('hidden');
 
                         }
                     }
@@ -151,7 +151,6 @@ $('.owl-carousel').owlCarousel(
                 {
                     nav.removeClass('nocolor').addClass('navChange');
                     presentation.addClass('hidden');
-                    coloredChars.removeClass('color1').addClass('hidden');
                     bgPresentation.addClass('hidden');
                 }
                 else
@@ -160,7 +159,6 @@ $('.owl-carousel').owlCarousel(
                     {
                         nav.removeClass('navChange').addClass('nocolor');
                         presentation.removeClass('hidden');
-                        coloredChars.removeClass('hidden').addClass('color1');
                         bgPresentation.removeClass('hidden');
                     }
                 

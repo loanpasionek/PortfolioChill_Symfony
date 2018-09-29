@@ -1,5 +1,5 @@
 html{font-size:62.5%;}
-/* body{overflow-x:hidden;} */
+body{overflow-x:hidden;}
 
 
 
@@ -26,18 +26,18 @@ html{font-size:62.5%;}
             .fs20{font-size:2rem;}
             .fs18{font-size:1.8rem;}
             .fs15{font-size:1.5rem;}
-
-
+            
 
 /* ----------------------- Couleurs ----------------------- */
 
 
-            .color1{color: #E64A19 !important;} /* orange */
+            .color1{color:#E64A19 !important;} /* orange */
             .color2{color:#757575;} /* gris foncé */
             .color3{color:#E3E7E7;} /* gris */
             .color4{color:#2a2a2a !important;} /* noir */
             .color5{color:#14293E !important;} /* bleu */
-            .color6{color:#f2f2f2;}
+            .color6{color:#f2f2f2;} /* blanc */
+            .color7{color:#2D0F05;} /* rouge foncé */
                     
 
             /* Backgrounds */
@@ -45,11 +45,12 @@ html{font-size:62.5%;}
             .bgcolor1{background-color: #FF5722; } /* orange */
             .bgcolor2{background-color: #E3E7E7;} /* gris */
             .bgcolor3{background-color:#14293E;} /* bleu */
-            .bgcolor4{background-color:#C94116;} /* orange foncé */
-            .bgcolor5{background-color:#2a2a2a;} /* noir */
+            .bgcolor4{background-color:#2a2a2a;} /* noir */
+            .bgcolor5{background-color:#D9D9D9;} /* bleu clair */
             .bgcolor6{background-color:#231202;} /* bg de la nav mobile */
             .bgcolor7{background-color:#f2f2f2;} /* blanc */
-            .bgcolor8{background-color: #757575;}
+            .bgcolor8{background-color: #757575;} /* gris foncé */
+            .bgcolor9{background-color: #2D0F05;} /* rouge foncé */
 
             
             .divider-color{ border-color: #BDBDBD; }
@@ -137,7 +138,7 @@ html{font-size:62.5%;}
             .valign
             {       
                 position:absolute;
-                top:50%;
+                    top:50%;
                 transform:translateY(-50%);
             }
 
@@ -147,53 +148,8 @@ html{font-size:62.5%;}
 
 
 /* ----------------------- Spécifiques ----------------------- */
-            /* ------------ Mur d'images ------------ */
-            
 
-            #culture button
-            {
-            width: 115px;
-            height: 30px;
-            margin:14px;
-            font-size:1.4rem;
-            border-radius:2px;
-            }
-            #projets button
-            {
-                width: 190px;
-                margin:14px;
-                font-size:1.4rem;
-                border-radius:2px;
-                padding:5px;
-            }
-
-            .grid{min-height: 500px;}
-    
-            .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
-            {
-                float: left;
-                width:115px;
-                margin-bottom: 0;
-            }
-
-            .grid-item, .grid-item-med, .grid-item-lg {display: block;}
-
-            .grid-item {height: 53.75px;}
-
-            .grid-item-med {height: 107.5px;}
-
-            .grid-item-lg {height: 161.25px;}
-
-            
-            .imgCulture 
-            {
-                width: 100%;
-                /* règle le problème de hover qui décale l'image d'1px*/
-                -webkit-backface-visibility: hidden;
-                -webkit-transform: translateZ(0) scale(1.0, 1.0);
-            }
-
-
+            .mh2200{max-height: 2200px;}
             /* --- Ecriture verticale --- */
             .rotated
             {
@@ -235,17 +191,66 @@ html{font-size:62.5%;}
 
             nav ul a:focus::after{border-bottom: 1px solid blue;}
 
+/* ----------------------- Mur d'images ----------------------- */
             
+
+            /* --- Style du menu pour le mur d'images --- */
+
+            #hobbies button
+            {
+            width: 115px;
+            height: 30px;
+            margin:14px;
+            font-size:1.4rem;
+            border-radius:2px;
+            }
+            #projets button
+            {
+                width: 190px;
+                margin:14px;
+                font-size:1.4rem;
+                border-radius:2px;
+                padding:5px;
+            }
+            
+            .grid{min-height: 500px;}
+    
+            .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
+            {
+                float: left;
+                width:115px;
+                margin-bottom: 0;
+            }
+
+            .grid-item, .grid-item-med, .grid-item-lg {display: block;}
+
+            .grid-item {height: 53.75px;}
+
+            .grid-item-med {height: 107.5px;}
+
+            .grid-item-lg {height: 161.25px;}
+
+
+          
+            .imgCulture 
+            {
+                width: 100%;
+                /* règle le problème de hover qui décale l'image d'1px*/
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1.0, 1.0);
+            }
+
+        
             button:hover{cursor: pointer;}
             button:active, button:focus
             {
                 background-color:#f2f2f2;
-                border: 1px solid #14293E;
+                border: 1px solid #2D0F05;
                 
             }
             
             button:active li, button:focus li{
-                color:#14293E;
+                color:#2D0F05;
 }
 
             #lienProjet:hover
@@ -261,7 +266,6 @@ html{font-size:62.5%;}
                 -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
           
-        
 
             /* --- Tooltip sur le mur d'images --- */
 
@@ -274,7 +278,7 @@ html{font-size:62.5%;}
             .tooltip .tooltiptext 
             {
                 visibility: hidden;
-                background-color:#FF5722;
+                background-color:#2D0F05;
                 color: #fff;
                 text-align: center;
                 padding: 5px 0;
@@ -304,49 +308,44 @@ html{font-size:62.5%;}
 
             nav{box-shadow: none;}
             .opacity95{opacity:0.95;}
-            .opacity20
-            {
-                opacity:0.20;
-                transition: 0.5s linear;
-            }
-            .opacity100
-            {
-                opacity: 1;
-                transition: 0.5 linear;
-            }
+            .opacity20{opacity:0.20;
+            transition: 0.5s linear;}
+            .opacity100{opacity: 1;
+            transition: 0.5 linear;}
             
+
+            .bgOpacity95
+            {
+                background-color:#fff;
+                opacity:0.95;
+            }
 
             a:hover{color:#FF5722 !important;}
 
             .faHover:hover{color:#FF5722 !important;}
 
+
 /* ----------------------- Parallax ----------------------- */
 
-            .slide1 
-            {
-                background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;
-                opacity: 0.95;
-            }
+            .slide1{background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;}
             
-            /* .slide2{background-color:#14293E;} */
+            .slide2{background: url('../img/bg_keyboard.jpg') center no-repeat fixed;}
 
-            .slide2
-            {
-                background: url('../img/bg_keyboard.jpg') center no-repeat fixed;
-            }
-            
+            .slide3{background:url('../img/bg_nightforest.jpg') center no-repeat fixed}
+
 
 /* ----------------------- Changement de nav selon position dans la page ----------------------- */
 
             .navChange
             {
-                background-color:#E64A19;
+                background-color:#14293E;
                 opacity:0.85;
                 transition: 0.5s linear;
             }
-            .navChange2{
-                background-color:#14293E;
-                opacity:0.85;
+            .navChange2
+            {
+                background-color:#2D0F05;
+                
                 transition: 0.5s linear;
             }
 
@@ -375,7 +374,7 @@ html{font-size:62.5%;}
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 
-    
+    .owl-dots{display:none;}
 
     .mbot30p-sm{margin-bottom:30px;}
 
