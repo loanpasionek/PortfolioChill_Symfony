@@ -330,8 +330,7 @@ body{overflow-x:hidden;}
 
 /* ----------------------- Parallax ----------------------- */
 
-            .slide1{background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;
-            opacity: 0.95;}
+            .slide1{background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;}
             
             .slide2{background: url('../img/bg_keyboard.jpg') center no-repeat fixed;}
 
