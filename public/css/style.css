@@ -7,9 +7,7 @@ body{overflow-x:hidden;}
 
             /* Familles */
 
-            .sunflower{font-family: 'Sunflower', sans-serif;}
-            .karma{font-family: 'Karma', serif;}
-            .exo2{font-family:'Exo 2', sans-serif;}
+            .titillium{font-family:'Titillium Web', sans-serif;}
 
 
             /* Tailles */
@@ -103,6 +101,7 @@ body{overflow-x:hidden;}
             .mleft40p{margin-left:40px;}
             .mleft2p{margin-left:2px;}
 
+            .mright20p{margin-right: 20px;}
             
 
             .padd40p{padding:40px;}
@@ -191,6 +190,7 @@ body{overflow-x:hidden;}
 
             nav ul a:focus::after{border-bottom: 1px solid blue;}
 
+
 /* ----------------------- Mur d'images ----------------------- */
             
 
@@ -204,7 +204,7 @@ body{overflow-x:hidden;}
             font-size:1.4rem;
             border-radius:2px;
             }
-            #projets button
+            #work button
             {
                 width: 190px;
                 margin:14px;
@@ -255,8 +255,9 @@ body{overflow-x:hidden;}
 
             #lienProjet:hover
             {
-                transform: scale(1.1);
+                transform: scale(1.05);
                 transition: 0.2s all ease;
+                color:black;
             }
             #lienProjet
             {
@@ -325,9 +326,12 @@ body{overflow-x:hidden;}
             .faHover:hover{color:#FF5722 !important;}
 
 
+            .right-float{float:right;}
+
 /* ----------------------- Parallax ----------------------- */
 
-            .slide1{background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;}
+            .slide1{background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;
+            opacity: 0.95;}
             
             .slide2{background: url('../img/bg_keyboard.jpg') center no-repeat fixed;}
 

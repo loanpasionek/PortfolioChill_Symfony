@@ -11,15 +11,15 @@
 
     <!-- Section présentation des projets -->
 
-<section id="work" class="nomargin card slide2 h100vh">
+<section id="work" class="nomargin card h100vh">
     <div class="row bgcolor5">
-        <div class="col exo2 bg_keyboard_sm h125p-sm"> 
+        <div class="col titillium bg_keyboard_sm h125p-sm"> 
                         
-            <h2 class="color5 nomargin sunflower rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p">Work</h2>
+            <h2 class="color5 nomargin titillium rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p">Work</h2>
                 
         </div>  
-        <div class="col l5 offset-l6 offset-m4 m6 fs24 right-align ">
-                <p class="fs20-mm fs24-sm fs24-xs color5 text-justify-sm padd40p">
+        <div class="col l5 offset-l6 offset-m4 m6 fs24 right-align titillium">
+                <p class="fs20-mm fs24-sm fs24-xs color5 text-justify-sm">
                 Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code
                 School, seul ou en groupe.
                 </p>
@@ -33,22 +33,24 @@
         
     </div>
       
-    <div class="row">
+    <div class="row slide2 h100">
         <div class="owl-carousel">
             {% for projet in projets %}
-            <div class="">
+            <div>
                 <div class="item mleft40p color6">
                     <div class="col l5 s12">
                         <!-- <hr class="w75p center"> -->
                         <br>
                         <a href="{{ projet.url }}" target="_blank">
                         
-                        <img src="{{ asset( projet.image )}}" alt="images projets" class="col l8 s12 imgCarousel">
+                        <img src="{{ asset( projet.image )}}" alt="images projets" class="col l10 s12 imgCarousel">
                         </a>
                     </div>
-                    <div class="col l5 s12">
+                    <div class="col l5 s12 titillium">
                         <div class="w75">
+                            <hr>
                             <p class="fs24 fs24-sm bold">{{ projet.name }}</p>
+                            <hr>
                             <div class="textjustify">
                                 <p class="fs20 fs20-sm"><span class="bold">Description :</span> <br>
                                     {{ projet.infos }}
@@ -56,7 +58,7 @@
                                 <p class="fs20 fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
                                     {{ projet.technos }}
                                 </p>
-                                <button id="lienProjet"><a href="{{ projet.url }}" target="_blank" class="fs20 bold">Lien vers le projet</a></button>           
+                                <button id="lienProjet"><a href="{{ projet.url }}" target="_blank" class="fs20">Lien vers le projet</a></button>           
                             </div>
                         </div>
                     </div>
@@ -73,7 +75,7 @@
 
     <!-- Section personnelle -->
 
-<section id="hobbies" class="card nomargin h100vh h100-sm sunflower slide3">
+<section id="hobbies" class="card nomargin h100vh h100-sm titillium slide3">
         
 
     <div class="flex block-on-med-and-down">
@@ -98,7 +100,7 @@
                     <div class="grid-item mleft2p mtop2p {{ hobbie.hobClass }} tooltip">
                         <a href="{{ hobbie.hobUrl }}" target="_blank">
                             <img src="{{ asset( hobbie.hobImg ) }}" alt="{{ hobbie.hobName }}" class="opacity100 imgCulture {{ hobbie.category }}">
-                            <span class="tooltiptext sunflower">{{ hobbie.hobName }}</span>
+                            <span class="tooltiptext titillium">{{ hobbie.hobName }}</span>
                         </a>
                     </div>
                 {% endfor %}
