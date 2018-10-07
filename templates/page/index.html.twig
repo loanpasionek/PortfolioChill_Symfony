@@ -13,10 +13,8 @@
 
 <section id="work" class="nomargin card h100vh">
     <div class="row bgcolor5">
-        <div class="col titillium bg_keyboard_sm h125p-sm"> 
-                        
+        <div class="col titillium bg_keyboard_sm h125p-sm">    
             <h2 class="color5 nomargin titillium rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p">Work</h2>
-                
         </div>  
         <div class="col l5 offset-l6 offset-m4 m6 fs24 right-align titillium">
                 <p class="fs20-mm fs24-sm fs24-xs color5 text-justify-sm bold">
@@ -28,41 +26,62 @@
                     <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color5"></i></a></li>
                     <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color5"></i></a></li>
             </ul>
-        </div> 
 
-        
+            <!-- Bouton d'ouverture du modal C.V. -->
+            <button id="button-modal">Curriculum Vitae</button>
+
+            <!-- Modal -->
+            <div id="modal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+
+</div>
+
+</div>
+
+        </div>      
     </div>
+
+        <!-- Carousel pour les projets -->
       
     <div class="row slide2 h100">
         <div class="owl-carousel">
             {% for projet in projets %}
             <div>
                 <div class="item mleft40p color6">
-                    <div class="col l5 s12">
+                    <div class="col l5 s12 mtop30p">
                         <!-- <hr class="w75p center"> -->
                         <br>
                         <a href="{{ projet.url }}" target="_blank">
                         
                         <img src="{{ asset( projet.image )}}" alt="images projets" class="col l10 s12 imgCarousel">
                         </a>
+
+                        <button id="lienProjet"><a href="{{ projet.url }}" target="_blank" class="fs20">Lien vers le projet</a></button>           
+
                     </div>
-                    <div class="col l5 s12 titillium">
+                    <div class="col l5 s12 titillium mtop30p">
                         <div class="w75">
                             <hr>
                             <p class="fs24 fs24-sm bold">{{ projet.name }}</p>
                             <hr>
-                            <div class="textjustify">
+                            <div class="textjustify bold">
                                 <p class="fs20 fs20-sm"><span class="bold">Description :</span> <br>
                                     {{ projet.infos }}
                                 </p>
                                 <p class="fs20 fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
                                     {{ projet.technos }}
                                 </p>
-                                <button id="lienProjet"><a href="{{ projet.url }}" target="_blank" class="fs20">Lien vers le projet</a></button>           
                             </div>
                         </div>
                     </div>
                 </div>
+                    <div class="owl-prev">prev</div>
+                    <div class="owl-next">next</div>
             </div>
             {% endfor %}
         </div>
@@ -75,12 +94,10 @@
 
     <!-- Section personnelle -->
 
-<section id="hobbies" class="card nomargin h100vh h100-sm titillium slide3">
-        
-
+<section id="hobbies" class="card nomargin h100vh h100minusNav-mm h100-sm titillium slide3">        
     <div class="flex block-on-med-and-down">
             <h3 class="nomargin rotated fs80 fs80-sm titleSection color6 h2padd h2-sm mtop30p right-align">Hobbies</h3>
-        <div class="w100-sm flex w100 row padd40p">
+        <div class="w100-sm flex w100 row padd40p padd20p-mm">
             <div class="w25">
                     <p class="fs24 fs32-sm w75-sm bold color6 nomargin center">Et à part le boulot ?</p>
 
