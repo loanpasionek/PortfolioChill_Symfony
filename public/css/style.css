@@ -212,7 +212,7 @@ body{overflow-x:hidden;}
             nav ul a:focus::after{border-bottom: 1px solid blue;}
             a:hover{color:#FF5722 !important;}
 
-            .faHover:hover{color:#FF5722 !important;}
+            .faHover:hover{color:#ffff !important;}
 
             .opacity95{opacity:0.95;}
             .opacity20
