@@ -81,6 +81,7 @@ body{overflow-x:hidden;}
             .w50{width:50%;}
             .w33{width:33%;}
             .w25{width:25%;}
+            .w23{width:23%;}
             .w20{width:20%;}
             .w15{width:15%}
             .w300p{width:300px;}
@@ -137,46 +138,64 @@ body{overflow-x:hidden;}
             .valign
             {       
                 position:absolute;
-                    top:50%;
+                top:50%;
                 transform:translateY(-50%);
             }
-
             
             .textjustify{text-align:justify;}
             .center{margin:auto;}
+            .right-float{float:right;}
+
 
 
 /* ----------------------- Spécifiques ----------------------- */
 
-            .mh2200{max-height: 2200px;}
+            
             /* --- Ecriture verticale --- */
             .rotated
             {
                 writing-mode: tb-rl;
                 transform: rotate(-180deg);
-                }
+            }
 
-            /* .imgCarousel
-            {
-                width:260px !important;
-                height:115px;
-            } */
+            /* --- Modal --- */
 
-            /* --- Split page --- */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
 
-            .split 
-            {
-				height: 100%;
-				width: 50%;
-				z-index: 1;
-				top: 0;
-				overflow-x: hidden;
-				padding-top: 20px;
-			}
-            
-            .left{left: 0;}
-            
-            .right {right: 0;}
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto; /* 15% from the top and centered */
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%; /* Could be more or less, depending on screen size */
+            }
+
+            /* The Close Button */
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
 
             .h2padd{padding:40px 0;}
             .hr-bold{border: 2px;}
@@ -188,70 +207,27 @@ body{overflow-x:hidden;}
             
             .noborder{border:none;}
 
+            nav{box-shadow: none;}
+
             nav ul a:focus::after{border-bottom: 1px solid blue;}
+            a:hover{color:#FF5722 !important;}
 
+            .faHover:hover{color:#FF5722 !important;}
 
-/* ----------------------- Mur d'images ----------------------- */
-            
-
-            /* --- Style du menu pour le mur d'images --- */
-
-            #hobbies button
+            .opacity95{opacity:0.95;}
+            .opacity20
             {
-            width: 115px;
-            height: 30px;
-            margin:14px;
-            font-size:1.4rem;
-            border-radius:2px;
+                opacity:0.20;
+                transition: 0.5s linear;
             }
-            #work button
+            .opacity100
             {
-                width: 190px;
-                margin:14px;
-                font-size:1.4rem;
-                border-radius:2px;
-                padding:5px;
-            }
-            
-            .grid{min-height: 500px;}
-    
-            .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
-            {
-                float: left;
-                width:115px;
-                margin-bottom: 0;
+                opacity: 1;
+                transition: 0.5 linear;
             }
 
-            .grid-item, .grid-item-med, .grid-item-lg {display: block;}
-
-            .grid-item {height: 53.75px;}
-
-            .grid-item-med {height: 107.5px;}
-
-            .grid-item-lg {height: 161.25px;}
-
-
-          
-            .imgCulture 
-            {
-                width: 100%;
-                /* règle le problème de hover qui décale l'image d'1px*/
-                -webkit-backface-visibility: hidden;
-                -webkit-transform: translateZ(0) scale(1.0, 1.0);
-            }
-
-        
-            button:hover{cursor: pointer;}
-            button:active, button:focus
-            {
-                background-color:#f2f2f2;
-                border: 1px solid #2D0F05;
-                
-            }
-            
-            button:active li, button:focus li{
-                color:#2D0F05;
-}
+            .row:last-child, .row {margin-bottom: 0;}
+       
 
             #lienProjet:hover
             {
@@ -266,7 +242,61 @@ body{overflow-x:hidden;}
                 -webkit-backface-visibility: hidden;
                 -webkit-transform: translateZ(0) scale(1.0, 1.0);
             }
-          
+
+            #work button
+            {
+                width: 190px;
+                margin:14px;
+                font-size:1.4rem;
+                border-radius:2px;
+                padding:5px;
+            }
+
+/* ----------------------- Mur d'images ----------------------- */
+            
+
+            /* --- Style du menu pour le mur d'images --- */
+
+            #hobbies button
+            {
+            width: 115px;
+            height: 30px;
+            margin:14px;
+            font-size:1.4rem;
+            border-radius:2px;
+            }
+            
+            .grid{min-height: 500px;}    
+            .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
+            {
+                float: left;
+                width:115px;
+                margin-bottom: 0;
+            }
+            .grid-item, .grid-item-med, .grid-item-lg {display: block;}
+            .grid-item {height: 53.75px;}
+            .grid-item-med {height: 107.5px;}
+            .grid-item-lg {height: 161.25px;}
+        
+            .imgCulture 
+            {
+                width: 100%;
+                /* règle le problème de hover qui décale l'image d'1px*/
+                -webkit-backface-visibility: hidden;
+                -webkit-transform: translateZ(0) scale(1.0, 1.0);
+            }
+
+        
+            button:hover{cursor: pointer;}
+            button:active, button:focus
+            {
+                background-color:#f2f2f2;
+                border: 1px solid rgb(255, 149, 114);
+            }
+            
+            button:active li, button:focus li{color:#2D0F05;}
+
+                   
 
             /* --- Tooltip sur le mur d'images --- */
 
@@ -299,38 +329,15 @@ body{overflow-x:hidden;}
 
             .imgCulture:hover
             {
-                    opacity:0.50;
-                    transition:0.3s linear;
-
+                opacity:0.50;
+                transition:0.3s linear;
             }
 
-            .row:last-child, .row {margin-bottom: 0;}
-
-
-            nav{box-shadow: none;}
-            .opacity95{opacity:0.95;}
-            .opacity20{opacity:0.20;
-            transition: 0.5s linear;}
-            .opacity100{opacity: 1;
-            transition: 0.5 linear;}
             
-
-            .bgOpacity95
-            {
-                background-color:#fff;
-                opacity:0.95;
-            }
-
-            a:hover{color:#FF5722 !important;}
-
-            .faHover:hover{color:#FF5722 !important;}
-
-
-            .right-float{float:right;}
 
 /* ----------------------- Parallax ----------------------- */
 
-            .slide1{background: url('../img/bg_forest_bot_1200.jpg') center no-repeat fixed;}
+            .slide1{background: url('../img/bg_forest.jpg') center no-repeat fixed;}
             
             .slide2{background: url('../img/bg_keyboard.jpg') center no-repeat fixed;}
 
@@ -351,128 +358,3 @@ body{overflow-x:hidden;}
                 
                 transition: 0.5s linear;
             }
-
-
-/* ----------------------- Media queries ----------------------- */
-
-
-/* Large Devices, Wide Screens */
-
-@media only screen and (min-width : 1200px){
-
-}
-
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-    .fs20-mm{font-size:2rem;}
-
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-
-    .owl-dots{display:none;}
-
-    .mbot30p-sm{margin-bottom:30px;}
-
-    /* .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
-    .bg_keyboard_sm{background:url('../img/bg_keyboard_1200.jpg') center fixed;} */
-
-    /* Parallax : background uni en small */
-    /* .slide1{background-image:none;}
-    .slide2{background-image:none;}
-    .slide1-sm {        
-        background-color:#231202;
-    }
-    .slide2-sm {
-        background-color:#273F5D;
-    } */
-
-
-    /* Fonts size en small, 20% moins grandes */
-    .fs80-sm{font-size:6.4rem;}
-    .fs60-sm{font-size:4.8rem;}
-    .fs40-sm{font-size:3.2rem;}
-    .fs36-sm{font-size:2.9rem;}
-    .fs32-sm{font-size:2.6rem;}
-    .fs24-sm{font-size:1.85rem;}
-    .fs20-sm{font-size:1.6rem;}
-    .fs18-sm{font-size:1.4rem;}
-    .fs15-sm{font-size:1.2rem;}
-
-    .sidenav li>a
-    {
-        font-size:1.8rem;
-        padding:0 10px 0;
-        margin: 10px 0;
-        color:#E3E7E7;
-    }
-    .sidenav li>a>i
-    {
-        margin: -5px 0 10px;
-        color:#E3E7E7;
-    }
-
-
-
-    .text-justify-sm{text-align: justify;}
-
-
-    .titleSection
-    {
-        text-align:center;
-        line-height:50px;
-        font-size:4rem;
-    }
-
-    /* Heights, widths, margins, paddings */
-
-    .w100-sm{width:100%;}
-    .w75-sm{width:75%;}
-    .w300p-sm{width:300px;}
-    .h100-sm{height:100%;}
-    .h125p-sm{height:125px;}
-    .h100minusNav-sm{height:calc(100vh - 55px);}
-
-    .padd40p-sm{padding:40px;}
-    .mtop30p-sm{margin-top:30px;}
-    .mtop0-sm{margin-top:0;}
-    .center-sm{margin:auto;}
-    .left8-sm{left:8%;}
-
-
-    /* Mur d'images en small */
-    
-    .imgCulture{height:100%;}
-    .grid-item, .grid-item-lg, .grid-item-med{width:33%;}
-    .grid-item{height:43.5px;}
-    .grid-item-med{height:87px;}
-    .grid-item-lg{height:130.5px;}
-    
-    .flex-on-med-and-down{display:flex;}
-    .block-on-med-and-down{display: block;}
-    /* Annulation des classes appliquées au H1 en large-screen */
-    .h1-sm, .h2-sm
-    {
-        display:block;
-        margin:0;
-        font-size:3.2rem;
-        text-align: center;
-        writing-mode: horizontal-tb;
-        transform: rotate(0deg);
-        }
-}
-
-        /* Iphone 4 & 5 */
-@media screen and (max-width : 320px){
-
-    .w250p-xs{width:250px;}
-    .grid-item, .grid-item-lg, .grid-item-med{width:33%;}
-}
-
