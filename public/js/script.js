@@ -59,9 +59,9 @@ $('a[href^="#"]').on('click', function(event) {
 $('.owl-carousel').owlCarousel(
     {
         loop:true,
-        nav:true,
+        nav:false,
         autoplay:true,
-        autoplayTimeout:5000,
+        autoplayTimeout:6000,
         autoplayHoverPause:true,
         responsive:
         {

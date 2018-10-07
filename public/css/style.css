@@ -358,3 +358,19 @@ body{overflow-x:hidden;}
                 
                 transition: 0.5s linear;
             }
+
+
+/* ----------------------- Style Owl-Carousel ----------------------- */
+
+.owl-carousel{
+    position: relative;
+  }
+  
+  .owl-dots{
+    position: absolute;
+    top:75%;
+    left:8%;
+  }
+
+  .owl-dot{width:0% !important;}
+  .owl-theme .owl-dots .owl-dot.active span{background-color:#E64A19;}
