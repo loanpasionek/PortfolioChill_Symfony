@@ -11,8 +11,6 @@ $(document).ready(function(){
 
 });
 
-
-
 /* ------------  Smooth scrolling ------------ */
 
 $('a[href^="#"]').on('click', function(event) {
@@ -49,12 +47,6 @@ $('a[href^="#"]').on('click', function(event) {
     }
 }
 });
-
-/* ------------  Bouton flottant en small screen ------------  */
-
-/* $(document).ready(function(){
-    $('.fixed-action-btn').floatingActionButton();
-  }); */
 
 
 /* ------------  Carousel ------------  */
@@ -100,7 +92,7 @@ $('.owl-carousel').owlCarousel(
         {
             var scroll = $(window).scrollTop();
 
-            /* Application de la fonction sur écrans larges > 800 */
+            /* Application de la fonction sur écrans larges > 1200 */
             if (screen.width > 1200)
                 {
                     if (scroll > windowHeight-navHeight-2)
@@ -113,10 +105,9 @@ $('.owl-carousel').owlCarousel(
                     {
                         if(scroll <= windowHeight-navHeight-2)
                         {
-                        nav.removeClass('navChange').addClass('nocolor');
-                        presentation.removeClass('hidden');
-                        coloredChars.removeClass('hidden');
-
+                            nav.removeClass('navChange').addClass('nocolor');
+                            presentation.removeClass('hidden');
+                            coloredChars.removeClass('hidden');
                         }
                     }
 
@@ -124,15 +115,14 @@ $('.owl-carousel').owlCarousel(
 
                     if (scroll > windowHeight*2-navHeight-2)
                     {
-
                         nav.addClass('navChange2');
                         navText.addClass('color6');
-
                     }
 
                     else
                     {
-                        if(scroll <= windowHeight*3-navHeight-2){
+                        if(scroll <= windowHeight*3-navHeight-2)
+                        {
                             nav.removeClass('navChange2');
                             navText.removeClass('color6');
                         }
@@ -168,15 +158,14 @@ $('.owl-carousel').owlCarousel(
 
                 if (scroll > windowHeight*2-navHeight)
                 {
-
                     nav.addClass('navChange2');
                     navText.addClass('color6');
-
                 }
 
                 else
                 {
-                    if(scroll <= windowHeight*3-navHeight*2){
+                    if(scroll <= windowHeight*3-navHeight*2)
+                    {
                         nav.removeClass('navChange2');
                         navText.removeClass('color6');
                     }
@@ -196,38 +185,69 @@ $('.owl-carousel').owlCarousel(
         var music = $('.musique');
         var games = $('.jeux');
         
-        $('#btn-books').click(function(){
+        $('#btn-books').click(function()
+        {
             all.addClass('opacity20').removeClass('opacity100');
             books.removeClass('opacity20').addClass('opacity100');
-
         });
 
-        $('#btn-video').click(function(){
+        $('#btn-video').click(function()
+        {
             all.addClass('opacity20').removeClass('opacity100');
             video.removeClass('opacity20').addClass('opacity100');
-
         });
 
-        $('#btn-sport').click(function(){
+        $('#btn-sport').click(function()
+        {
             all.addClass('opacity20').removeClass('opacity100');
             sport.removeClass('opacity20').addClass('opacity100');
         });
 
-        $('#btn-music').click(function(){
+        $('#btn-music').click(function()
+        {
             all.addClass('opacity20').removeClass('opacity100');
             music.removeClass('opacity20').addClass('opacity100');
-
         });
 
-        $('#btn-games').click(function(){
+        $('#btn-games').click(function()
+        {
             all.addClass('opacity20').removeClass('opacity100');
             games.removeClass('opacity20').addClass('opacity100');
-
         });
 
 
-        $('#btn-all').click(function(){
+        $('#btn-all').click(function()
+        {
             all.addClass('opacity100');
         });
 
     });
+
+    /* ------------ Gestion du modal ------------ */
+
+
+    // Get the modal
+    var modal = $('#modal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("button-modal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
