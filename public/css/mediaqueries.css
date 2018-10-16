@@ -20,8 +20,22 @@
 
     /* Widths */
 
-    .w90-sm{width: 90%;}
-    .w12-sm{width: 12%;}
+    .w100-mm{width:100%;}
+    .w95-mm{width:95%;}    
+    .w90-mm{width:90%;}
+    .w75-mm{width:75%;}
+    .w70-mm{width:70%;}
+    .w66-mm{width:66%;}
+    .w60-mm{width:60%;}
+    .w50-mm{width:50%;}
+    .w33-mm{width:33%;}
+    .w25-mm{width:25%;}
+    .w23-mm{width:23%;}
+    .w20-mm{width:20%;}
+    .w15-mm{width:15%}
+    .w12-mm{width:12%;}
+    .w300p-mm{width:300px;}
+    .w165p-mm{width:165px;}
 
     /* Fonts size en medium, 10% moins grandes */
     .fs80-mm{font-size:7.2rem;}
@@ -53,16 +67,7 @@
 }
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-
-    .owl-dots{display:none;}
-
-    .mbot30p-sm{margin-bottom:30px;}
-
-    .slide1{background:none;}
-    .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
-    .slide1-sm{background-color:black;}
-
+@media only screen and (max-width : 480px) {    
 
 
     /* Fonts size en small, 20% moins grandes */
@@ -75,6 +80,63 @@
     .fs20-sm{font-size:1.6rem;}
     .fs18-sm{font-size:1.4rem;}
     .fs15-sm{font-size:1.2rem;}
+
+
+    
+    .bold-sm{font-weight: 700;}
+    .text-justify-sm{text-align: justify;}
+
+
+    /* Widths */
+
+    .w100-sm{width:100%;}
+    .w95-sm{width:95%;}    
+    .w90-sm{width:90%;}
+    .w75-sm{width:75%;}
+    .w70-sm{width:70%;}
+    .w66-sm{width:66%;}
+    .w60-sm{width:60%;}
+    .w50-sm{width:50%;}
+    .w33-sm{width:33%;}
+    .w25-sm{width:25%;}
+    .w23-sm{width:23%;}
+    .w20-sm{width:20%;}
+    .w15-sm{width:15%}
+    .w12-sm{width:12%;}
+    .w300p-sm{width:300px;}
+    .w165p-sm{width:165px;}
+
+
+    /* Heights */
+    
+    .h100-sm{height:100%;}
+    .h125p-sm{height:125px;}
+    .h100minusNav-sm{height:calc(100vh - 55px);}
+    
+    /* Margins && paddings */
+
+    .padd40p-sm{padding:40px;}
+    .mtop30p-sm{margin-top:30px;}
+    .mtop0-sm{margin-top:0;}
+    .center-sm{margin:auto;}
+    .left8-sm{left:8%;}
+
+
+    .fixed-sm{position: fixed;}
+    .block-sm{display: block;}
+    .flex-sm{display: flex;}
+    .inline-sm{display: inline;}
+
+    /* Spécifiques */
+
+    .owl-dots{display:none;}
+
+    .mbot30p-sm{margin-bottom:30px;}
+
+    .slide1{background:none;}
+    .bg_forest_sm{background:url('../img/bg_forest_sm.jpg') center fixed;}
+    .slide1-sm{background-color:black;}
+
 
     .sidenav li>a
     {
@@ -89,33 +151,12 @@
         color:#E3E7E7;
     }
 
-
-
-    .text-justify-sm{text-align: justify;}
-
-
     .titleSection
     {
         text-align:center;
         line-height:50px;
         font-size:4rem;
     }
-
-    /* Heights, widths, margins, paddings */
-
-    .w100-sm{width:100%;}
-    .w75-sm{width:75%;}
-    .w300p-sm{width:300px;}
-    .h100-sm{height:100%;}
-    .h125p-sm{height:125px;}
-    .h100minusNav-sm{height:calc(100vh - 55px);}
-
-    .padd40p-sm{padding:40px;}
-    .mtop30p-sm{margin-top:30px;}
-    .mtop0-sm{margin-top:0;}
-    .center-sm{margin:auto;}
-    .left8-sm{left:8%;}
-
 
     /* Mur d'images en small */
     
@@ -136,7 +177,7 @@
         text-align: center;
         writing-mode: horizontal-tb;
         transform: rotate(0deg);
-        }
+    }
 }
 
         /* Iphone 4 & 5 */
