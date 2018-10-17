@@ -7,6 +7,7 @@ $(document).ready(function(){
     $('.grid').masonry({
         // set itemSelector so .grid-sizer is not used in layout
         itemSelector: '.grid-item',
+        gutter:0
       });
 
 });
@@ -223,8 +224,8 @@ $('.owl-carousel').owlCarousel(
 
     });
 
-    /* ------------ Gestion du modal ------------ */
 
+    /* ------------ Gestion du modal ------------ */
 
     var modal = document.getElementById('modal');
     var btn = document.getElementById("button-modal");
