@@ -105,4 +105,5 @@ class Hobbies
 
         return $this;
     }
+
 }

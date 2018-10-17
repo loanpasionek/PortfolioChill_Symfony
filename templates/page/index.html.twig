@@ -12,23 +12,22 @@
     <!-- Section présentation des projets -->
 
 <section id="work" class="nomargin card h100vh">
-    <div class="row bgcolor5">
+    <div class="row bgcolor3">
         <div class="col titillium bg_keyboard_sm h125p-sm">    
-            <h2 class="color5 nomargin titillium rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p bold-sm">Work</h2>
-        </div>  
+            <h2 class="color6 nomargin titillium rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p bold-sm">Work</h2>
+        </div>
         <div class="col l5 m6 fs24 right-align titillium">
-                <p class="fs20-mm fs24-sm fs24-xs color5 text-justify-sm bold w95-sm">Au boulot maintenant. Parce que vous êtes ici pour ça, après tout. <br>
-                Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code
-                School, seul ou en groupe. <br>
-                Si vous cliquez sur les boutons qui suivent, vous trouverez mes espaces GitHub, LinkedIn, un e-mail de contact et la possibilité d'ouvrir et de télécharger gratuitement mon C.V., incroyable !
-                </p>
-            
+            <p class="fs20-mm fs24-sm fs24-xs color6 text-justify-sm bold w95-sm padd5p-sm">Au boulot maintenant. Parce que vous êtes ici pour ça, après tout. <br>
+            Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code
+            School, seul ou en groupe. <br>
+            Si vous cliquez sur les boutons qui suivent, vous trouverez mes espaces GitHub, LinkedIn, un e-mail de contact et la possibilité d'ouvrir et de télécharger gratuitement mon C.V., incroyable !
+            </p>
         </div>
         <div>
             <ul class="col l5 flex jccaround">
-                <li><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color5"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color5"></i></a></li>
-                <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color5"></i></a></li>
+                <li><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color6"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color6"></i></a></li>
+                <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color6"></i></a></li>
             </ul>
                 <!-- Bouton d'ouverture du modal C.V. -->
                 <button id="button-modal">Curriculum Vitae</button>
@@ -72,6 +71,21 @@
                                 <p class="fs20 fs20-mm fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
                                     {{ projet.technos }}
                                 </p>
+                                <div class="flex">
+                                    <i class="material-icons">arrow_right_alt</i>
+                                    <span class="fs15">
+                                        <a href="{{ projet.giturl }}" target="_blank" class="fs15">
+                                        Git repository &nbsp                    
+                                        </a>
+                                    </span>
+                                    <i class="material-icons">arrow_right_alt</i>
+                                    <span class="fs15">
+                                        <a href="{{ projet.url }}" target="_blank" class="fs15">
+                                        Lien vers le projet                               
+                                        </a>
+                                    </span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -94,8 +108,8 @@
     <div class="flex block-on-med-and-down">
             <h3 class="nomargin rotated fs80 fs80-sm titleSection color6 h2padd h2-sm mtop30p right-align">Hobbies</h3>
         <div class="w100-sm flex w100 row padd40p padd20p-mm">
-            <div class="w25">
-                    <p class="fs24 fs32-sm w75-sm bold color6 nomargin center">Et à part le boulot ?</p>
+            <div class="w20">
+                    <p class="fs24 fs32-sm w75-sm bold color6 nomargin center">Et à part le boulot, tu fais quoi dans la vie ?</p>
 
                 <ul class="hide-on-small-only center">
                     <button id="btn-all" class="bgcolor9 color6 semi-bold noborder"><li>Tous</li></button>
@@ -108,7 +122,7 @@
             </div>
 
 
-            <div class="grid w75 left8-sm w300p-sm w250p-xs">
+            <div class="grid w85 left8-sm w300p-sm w250p-xs">
                 {% for hobbie in hobbies %}
                     <div class="grid-item mleft2p mtop2p {{ hobbie.hobClass }} tooltip">
                         <a href="{{ hobbie.hobUrl }}" target="_blank">

@@ -41,10 +41,11 @@ class Projets
      */
     private $technos;
 
-    public function getId()
-    {
-        return $this->id;
-    }
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $giturl;
+
 
     public function getName(): ?string
     {
@@ -105,4 +106,19 @@ class Projets
 
         return $this;
     }
+
+    public function getGiturl(): ?string
+    {
+        return $this->giturl;
+    }
+
+    public function setGiturl(string $giturl): self
+    {
+        $this->giturl = $giturl;
+
+        return $this;
+    }
+
+
+
 }
