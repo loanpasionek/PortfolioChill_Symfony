@@ -64,6 +64,7 @@ $('.owl-carousel').owlCarousel(
         autoplay:true,
         autoplayTimeout:6000,
         autoplayHoverPause:true,
+        smartSpeed:700,
         responsive:
         {
             0:{
