@@ -11,10 +11,10 @@
 
     <!-- Section présentation des projets -->
 
-<section id="work" class="nomargin card h100vh">
+<section id="work" class="nomargin card h100vh h200vh-sm">
     <div class="row bgcolor3">
         <div class="col titillium bg_keyboard_sm h125p-sm">    
-            <h2 class="color6 nomargin titillium rotated fs80 fs80-sm titleSection h2padd h2-sm mtop30p bold-sm">Work</h2>
+            <h2 class="color6 nomargin titillium rotated rotated-sm fs80 fs80-sm titleSection h2padd mtop30p bold-sm">Work</h2>
         </div>
         <div class="col l5 m6 fs24 right-align titillium">
             <p class="fs20-mm fs24-sm fs24-xs color6 text-justify-sm bold w95-sm padd5p-sm">Au boulot maintenant. Parce que vous êtes ici pour ça, après tout. <br>
@@ -50,8 +50,8 @@
         <div class="owl-carousel owl-theme owl-loaded">
             {% for projet in projets %}
             <div>
-                <div class="item mleft40p color6">
-                    <div class="col l5 s12 mtop30p">
+                <div class="item mleft40p center-sm color6">
+                    <div class="col l5 w100-sm mtop30p">
                         <!-- <hr class="w75p center"> -->
                         <br>
                         <a href="{{ projet.url }}" target="_blank">
@@ -60,27 +60,27 @@
                         </a>
                     </div>
                     <div class="col l5 s12 titillium mtop30p">
-                        <div class="w75">
+                        <div class="w75 w95-sm center-sm">
                             <hr>
-                            <p class="fs24 fs24-mm fs24-sm bold">{{ projet.name }}</p>
+                            <p class="fs24 fs24-mm fs32-sm bold">{{ projet.name }}</p>
                             <hr>
                             <div class="textjustify bold">
-                                <p class="fs20 fs20-mm fs20-sm"><span class="bold">Description :</span> <br>
+                                <p class="fs20 fs20-mm fs24-sm"><span class="bold">Description :</span> <br>
                                     {{ projet.infos }}
                                 </p>
-                                <p class="fs20 fs20-mm fs20-sm"><span class="bold">Technologies utilisées :</span> <br>
+                                <p class="fs20 fs20-mm fs24-sm"><span class="bold">Technologies utilisées :</span> <br>
                                     {{ projet.technos }}
                                 </p>
                                 <div class="flex">
                                     <i class="material-icons">arrow_right_alt</i>
-                                    <span class="fs15">
-                                        <a href="{{ projet.giturl }}" target="_blank" class="fs15">
+                                    <span>
+                                        <a href="{{ projet.giturl }}" target="_blank" class="fs15 fs20-sm">
                                         Git repository &nbsp                    
                                         </a>
                                     </span>
                                     <i class="material-icons">arrow_right_alt</i>
-                                    <span class="fs15">
-                                        <a href="{{ projet.url }}" target="_blank" class="fs15">
+                                    <span>
+                                        <a href="{{ projet.url }}" target="_blank" class="fs15 fs20-sm">
                                         Lien vers le projet                               
                                         </a>
                                     </span>
@@ -106,9 +106,9 @@
 
 <section id="hobbies" class="card nomargin h100vh h100minusNav-mm h100-sm titillium slide3">        
     <div class="flex block-on-med-and-down">
-            <h3 class="nomargin rotated fs80 fs80-sm titleSection color6 h2padd h2-sm mtop30p right-align">Hobbies</h3>
-        <div class="w100-sm flex w100 row padd40p padd20p-mm">
-            <div class="w20">
+            <h3 class="nomargin rotated rotated-sm fs80 fs80-sm titleSection color6 h2padd mtop30p right-align">Hobbies</h3>
+        <div class="w100-sm flex block-sm w100 row padd40p padd20p-mm">
+            <div class="w20 w100-sm">
                     <p class="fs24 fs32-sm w75-sm bold color6 nomargin center">Et à part le boulot, tu fais quoi dans la vie ?</p>
 
                 <ul class="hide-on-small-only center">
@@ -122,7 +122,7 @@
             </div>
 
 
-            <div class="grid w85 left8-sm w300p-sm w250p-xs">
+            <div class="grid w85 left8-sm w300p-sm w250p-xs mtop30p">
                 {% for hobbie in hobbies %}
                     <div class="grid-item mleft2p mtop2p {{ hobbie.hobClass }} tooltip">
                         <a href="{{ hobbie.hobUrl }}" target="_blank">

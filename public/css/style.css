@@ -73,6 +73,7 @@ body{overflow-x:hidden;}
 
 
 /* ----------------------- Widths ----------------------- */
+
             .w100{width:100%;}
             .w95{width:95%;}
             .w85{width:85%;}
@@ -216,6 +217,7 @@ body{overflow-x:hidden;}
             a:hover{color:#FF5722 !important;}
 
             .faHover:hover{color:#ffff !important;}
+            .lh0{line-height: 0;}
 
             .opacity95{opacity:0.95;}
             .opacity20
@@ -338,7 +340,7 @@ body{overflow-x:hidden;}
 
             
 
-/* ----------------------- Parallax ----------------------- */
+/* ----------------------- Effet Parallax ----------------------- */
 
             .slide1{background: url('../img/bg_forest.jpg') center no-repeat fixed;}
             

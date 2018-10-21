@@ -111,14 +111,18 @@
     
     .h100-sm{height:100%;}
     .h125p-sm{height:125px;}
+    .h200vh-sm{height:200vh;}
+    .h100vh-sm{height: 100vh;}
     .h100minusNav-sm{height:calc(100vh - 55px);}
     
     /* Margins && paddings */
 
     .padd40p-sm{padding:40px;}
     .padd5p-sm{padding: 5px;}
+
     .mtop30p-sm{margin-top:30px;}
     .mtop0-sm{margin-top:0;}
+
     .center-sm{margin:auto;}
     .left8-sm{left:8%;}
 
@@ -162,15 +166,15 @@
     /* Mur d'images en small */
     
     .imgCulture{height:100%;}
-    .grid-item, .grid-item-lg, .grid-item-med{width:33%;}
-    .grid-item{height:43.5px;}
+/*     .grid-item, .grid-item-lg, .grid-item-med{width:33%;}
+ */    .grid-item{height:43.5px;}
     .grid-item-med{height:87px;}
     .grid-item-lg{height:130.5px;}
     
     .flex-on-med-and-down{display:flex;}
     .block-on-med-and-down{display: block;}
     /* Annulation des classes appliquées au H1 en large-screen */
-    .h1-sm, .h2-sm
+    .rotated-sm
     {
         display:block;
         margin:0;
