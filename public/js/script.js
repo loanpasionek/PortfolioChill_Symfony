@@ -32,7 +32,7 @@ $('a[href^="#"]').on('click', function(event) {
 
 /* Meme fonction sur écrans < 800 */
 
-$('a[href^="#"]').on('click', function(event) {
+/* $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     var nav = $('nav').height();
     if(screen.width <= 800){
@@ -47,7 +47,7 @@ $('a[href^="#"]').on('click', function(event) {
         }, 2000);
     }
 }
-});
+}); */
 
 
 /* ------------  Carousel ------------  */
@@ -62,7 +62,7 @@ $('.owl-carousel').owlCarousel(
         loop:true,
         nav:false,
         autoplay:true,
-        autoplayTimeout:6000,
+        autoplayTimeout:9999996000,
         autoplayHoverPause:true,
         smartSpeed:700,
         responsive:
