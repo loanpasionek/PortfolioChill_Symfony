@@ -32,7 +32,7 @@ $('a[href^="#"]').on('click', function(event) {
 
 /* Meme fonction sur écrans < 800 */
 
-/* $('a[href^="#"]').on('click', function(event) {
+$('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     var nav = $('nav').height();
     if(screen.width <= 800){
@@ -40,14 +40,14 @@ $('a[href^="#"]').on('click', function(event) {
         event.preventDefault();
 
 
-        var scroll = target.offset().top -nav;
+        var scroll = target.offset().top -nav +1;
         
         $('html, body').stop().animate({
             scrollTop: scroll
         }, 2000);
     }
 }
-}); */
+});
 
 
 /* ------------  Carousel ------------  */

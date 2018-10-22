@@ -47,7 +47,7 @@
         <!-- Carousel pour les projets -->
       
     <div class="row slide2 h100 relative">
-        <div class="owl-carousel owl-theme owl-loaded">
+        <div class="owl-carousel owl-theme owl-loaded left8-mm">
             {% for projet in projets %}
             <div>
                 <div class="item mleft40p center-sm color6">
@@ -71,7 +71,8 @@
                                 <p class="fs20 fs20-mm fs24-sm"><span class="bold">Technologies utilisées :</span> <br>
                                     {{ projet.technos }}
                                 </p>
-                                <div class="flex">
+                                
+    <!-- Git / url -->            <div class="flex">
                                     <i class="material-icons">arrow_right_alt</i>
                                     <span>
                                         <a href="{{ projet.giturl }}" target="_blank" class="fs15 fs20-sm">
@@ -104,14 +105,13 @@
 
     <!-- Section personnelle -->
 
-<section id="hobbies" class="card nomargin h100vh h100minusNav-mm h100-sm titillium slide3">        
+<section id="hobbies" class="card nomargin h100vh h100minusNav-mm h100-sm h150vh-mm titillium slide3">        
     <div class="flex block-on-med-and-down">
             <h3 class="nomargin rotated rotated-sm fs80 fs80-sm titleSection color6 h2padd mtop30p right-align">Hobbies</h3>
-        <div class="w100-sm flex block-sm w100 row padd40p padd20p-mm">
-            <div class="w20 w100-sm">
-                    <p class="fs24 fs32-sm w75-sm bold color6 nomargin center">Et à part le boulot, tu fais quoi dans la vie ?</p>
-
-                <ul class="hide-on-small-only center">
+        <div class="w100-sm flex block-sm block-mm w100 row padd40p padd20p-mm">
+            <div class="w20 w100-sm w90-mm">
+                <p class="fs24 fs32-sm w75-sm bold color6 nomargin center">Et à part le boulot, tu fais quoi dans la vie ?</p>
+                <ul class="hide-on-small-only center row">
                     <button id="btn-all" class="bgcolor9 color6 semi-bold noborder"><li>Tous</li></button>
                     <button id="btn-books" class="bgcolor9 color6 semi-bold noborder"><li>Littérature</li></button>
                     <button id="btn-video" class="bgcolor9 color6 semi-bold noborder"><li>Ciné / séries</li></button>
@@ -122,7 +122,7 @@
             </div>
 
 
-            <div class="grid w85 left8-sm w300p-sm w250p-xs mtop30p">
+            <div class="grid w85 left8-sm left8-mm w300p-sm w250p-xs mtop30p">
                 {% for hobbie in hobbies %}
                     <div class="grid-item mleft2p mtop2p {{ hobbie.hobClass }} tooltip">
                         <a href="{{ hobbie.hobUrl }}" target="_blank">

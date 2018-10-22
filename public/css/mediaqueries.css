@@ -16,26 +16,27 @@
     .grid-item {height: 43px;}
     .grid-item-med {height: 86px;}
     .grid-item-lg {height: 129px;}
+    
 
 
     /* Widths */
 
-    .w100-mm{width:100%;}
-    .w95-mm{width:95%;}    
-    .w90-mm{width:90%;}
-    .w75-mm{width:75%;}
-    .w70-mm{width:70%;}
-    .w66-mm{width:66%;}
-    .w60-mm{width:60%;}
-    .w50-mm{width:50%;}
-    .w33-mm{width:33%;}
-    .w25-mm{width:25%;}
-    .w23-mm{width:23%;}
-    .w20-mm{width:20%;}
-    .w15-mm{width:15%}
-    .w12-mm{width:12%;}
-    .w300p-mm{width:300px;}
-    .w165p-mm{width:165px;}
+    .w100-ms{width:100%;}
+    .w95-ms{width:95%;}    
+    .w90-ms{width:90%;}
+    .w75-ms{width:75%;}
+    .w70-ms{width:70%;}
+    .w66-ms{width:66%;}
+    .w60-ms{width:60%;}
+    .w50-ms{width:50%;}
+    .w33-ms{width:33%;}
+    .w25-ms{width:25%;}
+    .w23-ms{width:23%;}
+    .w20-ms{width:20%;}
+    .w15-ms{width:15%}
+    .w12-ms{width:12%;}
+    .w300p-ms{width:300px;}
+    .w165p-ms{width:165px;}
 
     /* Fonts size en medium, 10% moins grandes */
     .fs80-mm{font-size:7.2rem;}
@@ -62,8 +63,50 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    .fs20-mm{font-size:2rem;}
+    .fs80-mm{font-size:7.2rem;}
+    .fs60-mm{font-size:5.4rem;}
+    .fs40-mm{font-size:3.6rem;}
+    .fs36-mm{font-size:3.2rem;}
+    .fs32-mm{font-size:2.6rem;}
+    .fs24-mm{font-size:2.2rem;}
+    .fs20-mm{font-size:1.8rem;}
+    .fs18-mm{font-size:1.6rem;}
+    .fs15-mm{font-size:1.3rem;}
 
+    
+    .h150vh-mm{height: 150vh;}
+    .block-mm{display:block;}
+    .flex-mm{display: flex;}
+    .owl-dots
+    {
+        top:40%;
+        left:20%;
+    }
+
+    
+
+    .left8-mm{left: 8%}
+
+    /* Width */
+
+    .w100-mm{width:100%;}
+    .w95-mm{width:95%;}    
+    .w90-mm{width:90%;}
+    .w75-mm{width:75%;}
+    .w70-mm{width:70%;}
+    .w66-mm{width:66%;}
+    .w60-mm{width:60%;}
+    .w50-mm{width:50%;}
+    .w33-mm{width:33%;}
+    .w25-mm{width:25%;}
+    .w23-mm{width:23%;}
+    .w20-mm{width:20%;}
+    .w15-mm{width:15%}
+    .w12-mm{width:12%;}
+    .w300p-mm{width:300px;}
+    .w165p-mm{width:165px;}
+
+    .center-mm{margin: 0 auto;}
 }
 
 /* Extra Small Devices, Phones */ 
