@@ -16,8 +16,6 @@
     .grid-item {height: 43px;}
     .grid-item-med {height: 86px;}
     .grid-item-lg {height: 129px;}
-    
-
 
     /* Widths */
 
@@ -62,7 +60,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 768px) and (min-width: 480px) {
     .fs80-mm{font-size:7.2rem;}
     .fs60-mm{font-size:5.4rem;}
     .fs40-mm{font-size:3.6rem;}
@@ -162,6 +160,7 @@
 
     .padd40p-sm{padding:40px;}
     .padd5p-sm{padding: 5px;}
+    .paddName-sm{padding: 10px 0 10px 0;}
 
     .mtop30p-sm{margin-top:30px;}
     .mtop0-sm{margin-top:0;}
@@ -209,8 +208,8 @@
     /* Mur d'images en small */
     
     .imgCulture{height:100%;}
-/*     .grid-item, .grid-item-lg, .grid-item-med{width:33%;}
- */    .grid-item{height:43.5px;}
+
+    .grid-item{height:43.5px;}
     .grid-item-med{height:87px;}
     .grid-item-lg{height:130.5px;}
     
