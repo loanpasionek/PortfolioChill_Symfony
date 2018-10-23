@@ -56,12 +56,7 @@
 
     .h100minusNav-mm{height:calc(100vh - 55px);}
 
-    .padd20p-mm{padding: 20px}
-    .owl-dots
-    {
-        top:40%;
-        left:20%;
-    }
+    .padd20p-mm{padding: 20px;}
 
 }
 
@@ -85,7 +80,7 @@
     .fs15-mm{font-size:1.3rem;}
 
     
-    .h150vh-mm{height: 150vh;}
+    .h120vh-mm{height: 120vh;}
     .block-mm{display:block;}
     .flex-mm{display: flex;}
     .unset-mm{position: unset;}
@@ -94,7 +89,7 @@
         top:43%;
         left:25%;
     }
-    .owl-stage-outer{left:8%;}
+    .owl-stage-outer{margin-left:8%;}
     
     
 
