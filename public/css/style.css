@@ -111,6 +111,7 @@ body{overflow-x:hidden;}
 
             .padd40p{padding:40px;}
             .padd20p{padding:20px;}
+            .padd0-20-0-20p{padding: 0 20px 0 20px;}
             
             .nomargin{margin: 0;}
             .nopadding{padding:0;}
@@ -373,8 +374,8 @@ body{overflow-x:hidden;}
   
   .owl-dots{
     position: absolute;
-    top:75%;
-    left:8%;
+    top:70%;
+    left:6%;
   }
 
   .owl-dot{width:0% !important;}

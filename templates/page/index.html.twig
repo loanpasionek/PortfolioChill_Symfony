@@ -16,38 +16,40 @@
         <div class="col titillium bg_keyboard_sm h125p-sm">    
             <h2 class="color6 nomargin titillium rotated rotated-sm fs80 fs80-sm titleSection h2padd mtop30p bold-sm">Work</h2>
         </div>
-        <div class="col l5 m6 fs24 right-align titillium">
-            <p class="fs20-mm fs24-sm fs24-xs color6 text-justify-sm bold w95-sm padd5p-sm">Au boulot maintenant. Parce que vous êtes ici pour ça, après tout. <br>
-            Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code
-            School, seul ou en groupe. <br>
-            Vous trouverez ci-après mes espaces GitHub, LinkedIn, et un e-mail de contact.
-            </p>
-        </div>
-        <div>
-            <ul class="col l5 flex jccaround">
-                <li><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color6"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color6"></i></a></li>
-                <li><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color6"></i></a></li>
-            </ul>
-                <!-- Bouton d'ouverture du modal C.V. -->
-                <!--   <button id="button-modal">Curriculum Vitae</button> -->
+        
+        <div class="row">
+{#         <img src="img/workhard.gif" class="col l6">
+ #}            <div class="col l5 offset-l6 m6 fs24 right-align titillium">
+                <p class="fs20-mm fs24-sm fs24-xs color6 text-justify-sm bold w95-sm padd5p-sm">Au boulot maintenant. Parce que vous êtes ici pour ça, après tout. <br>
+                Ci-dessous se trouvent les projets sur lesquels j'ai pu travailler durant les 6 mois de formation au sein de l'Access Code
+                School, seul ou en groupe. <br>
+                Vous trouverez ci-après mes espaces GitHub, LinkedIn, et un e-mail de contact.
+                </p>
+                <ul class="col l10 offset-l2 flex jcbetween">
+                    <li class="padd0-20-0-20p"><a href="https://github.com/loanpasionek/" target="_blank" ><i class="fab faHover fa-github fs40 fs40-xs color6"></i></a></li>
+                    <li class="padd0-20-0-20p"><a href="https://www.linkedin.com/in/loan-pasionek" target="_blank"><i class="fab faHover fa-linkedin-in fs40 fs40-xs color6"></i></a></li>
+                    <li class="padd0-20-0-20p"><a href="mailto:l.pasionek@gmail.com"><i class="fas faHover fa-at fs40 fs40-xs color6"></i></a></li>
+                </ul>
+                    <!-- Bouton d'ouverture du modal C.V. -->
+                    <!--   <button id="button-modal">Curriculum Vitae</button> -->
 
-                <!-- Modal -->
-                <div id="modal" class="modal">
+                    <!-- Modal -->
+                    <div id="modal" class="modal">
 
-                    <!-- Contenu du modal -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Some text in the Modal..</p>
+                        <!-- Contenu du modal -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
                     </div>
-                </div>
+            </div>
         </div>
     </div>      
 
         <!-- Carousel pour les projets -->
       
     <div class="row slide2 h100 relative h100vh-xl">
-        <div class="owl-carousel owl-theme owl-loaded left8-mm">
+        <div class="owl-carousel owl-theme owl-loaded ">
             {% for projet in projets %}
             <div>
                 <div class="item mleft40p center-sm color6">

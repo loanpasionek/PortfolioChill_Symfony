@@ -57,6 +57,11 @@
     .h100minusNav-mm{height:calc(100vh - 55px);}
 
     .padd20p-mm{padding: 20px}
+    .owl-dots
+    {
+        top:40%;
+        left:20%;
+    }
 
 }
 
@@ -86,10 +91,11 @@
     .unset-mm{position: unset;}
     .owl-dots
     {
-        top:40%;
-        left:20%;
+        top:43%;
+        left:25%;
     }
-
+    .owl-stage-outer{left:8%;}
+    
     
 
     .left8-mm{left: 8%}
