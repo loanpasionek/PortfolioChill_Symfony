@@ -10,7 +10,7 @@
 
 /* Medium screens */
 
-@media only screen and (max-width : 1400px){
+@media only screen and (max-width : 1400px) {
     /* Grid */
     
     .grid-item, .grid-item-med, .grid-item-lg, .tooltip, .tooltiptext 
@@ -162,8 +162,9 @@
     
     .h100-sm{height:100%;}
     .h125p-sm{height:125px;}
-    .h200vh-sm{height:200vh;}
+    .h175vh-sm{height:175vh;}
     .h100vh-sm{height: 100vh;}
+    .h50vh-sm{height: 50vh;}
     .h100minusNav-sm{height:calc(100vh - 55px);}
     
     /* Margins && paddings */
@@ -177,17 +178,18 @@
 
     .center-sm{margin:auto;}
     .left8-sm{left:8%;}
+    .owl-stage-outer{margin-left: 0;}
+
 
 
     .fixed-sm{position: fixed;}
     .block-sm{display: block;}
     .flex-sm{display: flex;}
     .inline-sm{display: inline;}
+    .noFloat-sm{float:none !important;}
 
     /* Spécifiques */
 
-/*     .owl-dots{display:none;}
- */
 
 
     .owl-dots

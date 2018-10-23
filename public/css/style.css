@@ -375,8 +375,10 @@ body{overflow-x:hidden;}
   .owl-dots{
     position: absolute;
     top:70%;
-    left:6%;
+    left:14%;
   }
+
+  .owl-stage-outer{margin-left: 8%;}
 
   .owl-dot{width:0% !important;}
   .owl-theme .owl-dots .owl-dot.active span{background-color:#E64A19;}
