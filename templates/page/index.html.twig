@@ -59,6 +59,8 @@
                         <img src="{{ asset( projet.image )}}" alt="images projets" class="col l10 s12 imgCarousel">
                         </a>
                     </div>
+
+                    {# Infos projet #}
                     <div class="col l5 s12 titillium mtop30p">
                         <div class="w75 w95-sm center-sm">
                             <hr>
@@ -71,8 +73,8 @@
                                 <p class="fs20 fs20-mm fs24-sm"><span class="bold">Technologies utilisées :</span> <br>
                                     {{ projet.technos }}
                                 </p>
-                                
-    <!-- Git / url -->            <div class="flex">
+                                <!-- Git / url -->
+                                <div class="flex">
                                     <i class="material-icons">arrow_right_alt</i>
                                     <span>
                                         <a href="{{ projet.giturl }}" target="_blank" class="fs15 fs20-sm">
@@ -86,19 +88,14 @@
                                         </a>
                                     </span>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             {% endfor %}
-
         </div>
-
-    </div>
-        
-    
+    </div>    
 </section>
 
 
