@@ -2,9 +2,10 @@ M.AutoInit();
 
 /* ------------ Masonry init ------------ */
 
-$(document).ready(function(){
-
-    $('.grid').masonry({
+$(document).ready(function()
+{
+    $('.grid').masonry(
+        {
         // set itemSelector so .grid-sizer is not used in layout
         itemSelector: '.grid-item',
         gutter:0
